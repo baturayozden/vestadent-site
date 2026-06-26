@@ -38,13 +38,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<!--
-  TODO (do not fabricate — confirm with the practice before publishing):
-  - "priceRange" for the LocalBusiness schema below (e.g. "££" / "£££").
-  - Geo coordinates (latitude/longitude) for the practice.
-  - Practice / clinician GDC registration numbers.
-  Add these to the JSON-LD once known.
--->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -298,7 +291,7 @@ a{color:inherit;text-decoration:none}
   <a href="#" class="brand"><span class="mark"></span>Vestadent</a>
   <div class="nav-links">
     <a href="#treatments">Treatments</a><a href="#implant">Implants</a>
-    <a href="#smile">Before &amp; after</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    <a href="#contact">Contact</a>
   </div>
   <div class="nav-right">
     <a href="tel:02033029290" class="nav-tel">0203 302 9290</a>
@@ -404,8 +397,8 @@ a{color:inherit;text-decoration:none}
   </div>
 </div></section>
 
-<!-- BEFORE / AFTER -->
-<section class="section smile-sec" id="smile"><div class="wrap">
+<!-- BEFORE / AFTER — hidden in this release until written patient consent + ASA/GDC labelling is confirmed (wave 2). Markup kept ready; lazy images are not loaded while hidden. -->
+<section class="section smile-sec" id="smile" hidden><div class="wrap">
   <div class="sec-head" data-reveal>
     <span class="eyebrow">Before &amp; after · smile design</span>
     <h2>Real results from our clinic group.</h2>
@@ -447,8 +440,8 @@ a{color:inherit;text-decoration:none}
   </div>
 </div></section>
 
-<!-- REVIEWS -->
-<section class="section reviews" id="reviews"><div class="wrap">
+<!-- REVIEWS — hidden in this release. The Trustpilot TrustBox markup is kept ready as a placeholder; it renders once the clinic group's Business Unit ID is added (wave 2). The bootstrap script is omitted here so no widget request is made. -->
+<section class="section reviews" id="reviews" hidden><div class="wrap">
   <div class="sec-head" data-reveal>
     <span class="eyebrow" style="color:var(--cyan-bright)">Reviews</span>
     <h2>Reviews from our clinic group.</h2>
@@ -491,8 +484,8 @@ a{color:inherit;text-decoration:none}
   <div class="foot-top">
     <div><a href="#" class="brand"><span class="mark"></span>Vestadent</a>
       <p class="foot-blurb">Digital implant and cosmetic dentistry in Kingsbury, North West London. Smiles designed before they're made.</p></div>
-    <div class="foot-col"><h5>Treatments</h5><a href="#treatments">Dental implants</a><a href="#treatments">All-on-4 &amp; All-on-6</a><a href="#treatments">E.max veneers</a><a href="#treatments">Composite bonding</a><a href="#smile">Smile design</a></div>
-    <div class="foot-col"><h5>Clinic</h5><a href="#implant">Implants</a><a href="#why">Why Vestadent</a><a href="#smile">Before &amp; after</a><a href="#practice">Inside the practice</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+    <div class="foot-col"><h5>Treatments</h5><a href="#treatments">Dental implants</a><a href="#treatments">All-on-4 &amp; All-on-6</a><a href="#treatments">E.max veneers</a><a href="#treatments">Composite bonding</a><a href="#treatments">Hollywood smile</a></div>
+    <div class="foot-col"><h5>Clinic</h5><a href="#implant">Implants</a><a href="#why">Why Vestadent</a><a href="#practice">Inside the practice</a><a href="#contact">Contact</a></div>
     <div class="foot-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/cookie-policy">Cookie Policy</a><a href="/terms">Terms &amp; Conditions</a><a href="/complaints">Complaints Procedure</a><a href="/patient-charter">Patient Charter</a><a href="/accessibility">Accessibility</a></div>
   </div>
   <div class="foot-reg">
@@ -511,8 +504,6 @@ a{color:inherit;text-decoration:none}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.14/lenis.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<!-- Trustpilot TrustBox bootstrap — renders the live reviews widget in the #reviews section -->
-<script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 <script>
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
