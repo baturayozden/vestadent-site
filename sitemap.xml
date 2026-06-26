@@ -6,9 +6,68 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://vestadent.co.uk/treatments/dental-implants</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/treatments/all-on-4-all-on-6</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/treatments/emax-veneers</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/treatments/zirconium-crowns</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/treatments/composite-bonding</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/treatments/hollywood-smile</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/treatments/robotic-implant</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/treatments/oral-surgery</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/treatments/teeth-whitening</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/terms</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
   <!--
-    Legal pages (privacy-policy, cookie-policy, terms, complaints, patient-charter,
-    accessibility) are intentionally omitted while they carry <meta robots="noindex">
-    pending solicitor approval. Re-add them in wave 2 once the noindex is removed.
+    Still noindex (omitted until solicitor sign-off / open TODOs closed):
+    /privacy-policy, /cookie-policy, /complaints, /patient-charter, /accessibility
   -->
 </urlset>
