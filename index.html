@@ -1,11 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <!-- Vestadent — interactive homepage. GSAP + ScrollTrigger + Lenis + three.js (cdnjs). No framework. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vestadent — Cosmetic & Implant Dentistry, Kingsbury London</title>
+
+<title>Vestadent — Cosmetic &amp; Implant Dentistry in Kingsbury, London</title>
+<meta name="description" content="Vestadent is a digital implant and cosmetic dental clinic in Kingsbury, North West London. Dental implants, All-on-4, veneers and smile design — every case planned in 3D before treatment begins.">
+<link rel="canonical" href="https://vestadent.co.uk/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#07203B">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vestadent">
+<meta property="og:title" content="Vestadent — Cosmetic &amp; Implant Dentistry in Kingsbury, London">
+<meta property="og:description" content="A digital implant and cosmetic dental clinic in North West London. Every smile planned in 3D — preview and approve your result before treatment begins.">
+<meta property="og:url" content="https://vestadent.co.uk/">
+<meta property="og:image" content="https://vestadent.co.uk/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vestadent — cosmetic and implant dentistry, Kingsbury London">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vestadent — Cosmetic &amp; Implant Dentistry in Kingsbury, London">
+<meta name="twitter:description" content="A digital implant and cosmetic dental clinic in North West London. Smiles designed in 3D before treatment begins.">
+<meta name="twitter:image" content="https://vestadent.co.uk/img/og-image.png">
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!--
+  TODO (do not fabricate — confirm with the practice before publishing):
+  - "priceRange" for the LocalBusiness schema below (e.g. "££" / "£££").
+  - Geo coordinates (latitude/longitude) for the practice.
+  - Practice / clinician GDC registration numbers.
+  Add these to the JSON-LD once known.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Vestadent Clinic",
+  "description": "Digital implant and cosmetic dental clinic in Kingsbury, North West London.",
+  "url": "https://vestadent.co.uk/",
+  "telephone": "+442033029290",
+  "email": "info@vestadent.co.uk",
+  "image": "https://vestadent.co.uk/img/og-image.png",
+  "logo": "https://vestadent.co.uk/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "230 Church Lane",
+    "addressLocality": "London",
+    "addressRegion": "Greater London",
+    "postalCode": "NW9 8SN",
+    "addressCountry": "GB"
+  },
+  "areaServed": "North West London",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ]
+}
+</script>
 
 <style>
 :root{
@@ -174,6 +249,24 @@ a{color:inherit;text-decoration:none}
 .rev p{font-size:14.5px;color:rgba(220,232,242,.86);line-height:1.62;flex:1;font-style:italic;font-family:var(--display)}
 .rev .who{margin-top:22px;font-size:12px;font-family:var(--mono);color:rgba(220,232,242,.55);letter-spacing:.06em}
 
+/* TEAM */
+.team{background:var(--white)}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.member{border:1px solid var(--line-light);border-radius:20px;overflow:hidden;background:#fff;transition:transform .45s var(--e-expo),box-shadow .45s}
+.member:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(11,44,77,.13)}
+.member img{display:block;width:100%;height:auto;aspect-ratio:5/6;object-fit:cover;background:var(--bone)}
+.member .m-body{padding:22px 24px}
+.member h4{font-family:var(--display);font-size:21px;font-weight:500;margin:0 0 4px;letter-spacing:-.01em}
+.member .role{font-size:13.5px;color:rgba(14,27,40,.62)}
+.member .gdc{margin-top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:rgba(14,27,40,.45)}
+
+/* PRACTICE GALLERY */
+.gallery{background:var(--bone-bright)}
+.gal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.gal-item{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line-light);background:var(--bone)}
+.gal-item img{display:block;width:100%;height:100%;aspect-ratio:4/3;object-fit:cover}
+.gal-cap{position:absolute;left:16px;bottom:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(7,32,59,.55);backdrop-filter:blur(6px);padding:6px 12px;border-radius:999px}
+
 /* CONTACT */
 .contact{background:var(--bone-bright)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
@@ -209,16 +302,19 @@ a{color:inherit;text-decoration:none}
   .pillars{grid-template-columns:1fr 1fr}.rev-grid{grid-template-columns:1fr}
   .smile-grid,.contact-grid,.impl-grid{grid-template-columns:1fr}
   .tgrid{grid-template-columns:1fr 1fr}.foot-top{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
   .impl-vis{height:440px}
 }
 @media(max-width:680px){
   .nav-links{display:none}.burger{display:block}
-  .pillars,.stats,.rev-grid,.tgrid,.foot-top{grid-template-columns:1fr}
+  .pillars,.stats,.rev-grid,.tgrid,.foot-top,.team-grid,.gal-grid{grid-template-columns:1fr}
   .section{padding:78px 0}.foot-bot{flex-direction:column;align-items:flex-start}
 }
 @media(prefers-reduced-motion:reduce){.aurora,.marquee-track,.scrollcue i{animation:none}}
 </style>
+</head>
 
+<body>
 <div class="grain"></div>
 <div class="cursor"></div><div class="cursor-r"></div>
 <div class="prog" id="prog"></div>
@@ -228,7 +324,7 @@ a{color:inherit;text-decoration:none}
   <a href="#" class="brand"><span class="mark"></span>Vestadent</a>
   <div class="nav-links">
     <a href="#treatments">Treatments</a><a href="#implant">Implants</a>
-    <a href="#smile">Smile design</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    <a href="#smile">Smile design</a><a href="#team">Team</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
   </div>
   <div class="nav-right">
     <a href="tel:02033029290" class="nav-tel">0203 302 9290</a>
@@ -326,10 +422,34 @@ a{color:inherit;text-decoration:none}
     <div class="pillar" data-reveal><div class="pn">03</div><h4>Premium materials</h4><p>Globally certified implant systems and metal-free ceramics — nothing generic.</p></div>
     <div class="pillar" data-reveal><div class="pn">04</div><h4>Transparent pricing</h4><p>An itemised quote before you commit. You'll always know what you're paying for.</p></div>
   </div>
+  <!-- TODO: confirm these operational claims are accurate for THIS practice before publishing — specifically "same-day temporaries milled in-house" and "100% metal-free". Keep only what the clinic can substantiate; do not present unverified claims as fact. -->
   <div class="stats">
     <div class="stat" data-reveal><div class="n" data-count="3" data-suffix="D">0</div><div class="l">Every smile planned in 3D before treatment begins</div></div>
     <div class="stat" data-reveal><div class="n" data-count="12" data-suffix="hr">0</div><div class="l">Same-day temporaries on full-arch cases, milled in-house</div></div>
     <div class="stat" data-reveal><div class="n" data-count="100" data-suffix="%">0</div><div class="l">Metal-free, globally certified ceramics and implant systems</div></div>
+  </div>
+</div></section>
+
+<!-- TEAM — TODO: replace placeholder portraits with real clinician photos, and fill in names, roles and GDC numbers. Do NOT fabricate any of these. -->
+<section class="section team" id="team"><div class="wrap">
+  <div class="sec-head" data-reveal>
+    <span class="eyebrow">The team</span>
+    <h2>Care led by registered clinicians.</h2>
+    <p>Every clinician at Vestadent is registered with the General Dental Council. Individual profiles, names and GDC registration numbers are published here once confirmed.</p>
+  </div>
+  <div class="team-grid">
+    <article class="member" data-reveal>
+      <img src="/img/placeholder-portrait.svg" alt="Portrait of a Vestadent clinician — photograph to be supplied" width="600" height="720" loading="lazy">
+      <div class="m-body"><h4>[TODO: clinician name]</h4><div class="role">[TODO: role / area of focus]</div><div class="gdc">GDC No. [TODO]</div></div>
+    </article>
+    <article class="member" data-reveal>
+      <img src="/img/placeholder-portrait.svg" alt="Portrait of a Vestadent clinician — photograph to be supplied" width="600" height="720" loading="lazy">
+      <div class="m-body"><h4>[TODO: clinician name]</h4><div class="role">[TODO: role / area of focus]</div><div class="gdc">GDC No. [TODO]</div></div>
+    </article>
+    <article class="member" data-reveal>
+      <img src="/img/placeholder-portrait.svg" alt="Portrait of a Vestadent clinician — photograph to be supplied" width="600" height="720" loading="lazy">
+      <div class="m-body"><h4>[TODO: clinician name]</h4><div class="role">[TODO: role / area of focus]</div><div class="gdc">GDC No. [TODO]</div></div>
+    </article>
   </div>
 </div></section>
 
@@ -360,16 +480,32 @@ a{color:inherit;text-decoration:none}
   </div>
 </div></section>
 
+<!-- INSIDE THE PRACTICE — TODO: replace placeholders with real photographs of THIS clinic (exterior, reception, treatment room, equipment). No stock or AI-generated imagery. -->
+<section class="section gallery" id="practice"><div class="wrap">
+  <div class="sec-head" data-reveal>
+    <span class="eyebrow">Inside the practice</span>
+    <h2>A calm, modern clinic in Kingsbury.</h2>
+    <p>Purpose-built for digital dentistry, from the first scan to the finished smile. Real photographs of the practice are added here before launch.</p>
+  </div>
+  <div class="gal-grid">
+    <figure class="gal-item" data-reveal><img src="/img/placeholder-landscape.svg" alt="Vestadent clinic exterior on Church Lane, Kingsbury — photograph to be supplied" width="800" height="600" loading="lazy"><figcaption class="gal-cap">Clinic exterior</figcaption></figure>
+    <figure class="gal-item" data-reveal><img src="/img/placeholder-landscape.svg" alt="Vestadent reception and waiting area — photograph to be supplied" width="800" height="600" loading="lazy"><figcaption class="gal-cap">Reception</figcaption></figure>
+    <figure class="gal-item" data-reveal><img src="/img/placeholder-landscape.svg" alt="Vestadent treatment room — photograph to be supplied" width="800" height="600" loading="lazy"><figcaption class="gal-cap">Treatment room</figcaption></figure>
+    <figure class="gal-item" data-reveal><img src="/img/placeholder-landscape.svg" alt="Vestadent 3D imaging and digital scanning equipment — photograph to be supplied" width="800" height="600" loading="lazy"><figcaption class="gal-cap">Imaging &amp; scanning</figcaption></figure>
+  </div>
+</div></section>
+
 <!-- REVIEWS -->
 <section class="section reviews" id="reviews"><div class="wrap">
   <div class="sec-head" data-reveal>
     <span class="eyebrow" style="color:var(--cyan-bright)">Patient reviews</span>
     <h2>Trusted across North West London.</h2>
   </div>
+  <!-- TODO: confirm these are genuine, patient-consented reviews and attribute each to its real verified source (e.g. Google) before publishing. Do NOT fabricate reviews or restore an unverified clinician name. -->
   <div class="rev-grid">
-    <div class="rev" data-reveal><div class="stars">★★★★★</div><p>"After consulting three other dentists, it was a relief to find one who thoroughly examined the issue and treated it properly. Professional throughout, every step explained beforehand."</p><div class="who">— Verified patient</div></div>
-    <div class="rev" data-reveal><div class="stars">★★★★★</div><p>"One of the best dental clinics — very professional, very modern equipment, and genuinely friendly staff. Looked after from the moment I walked in."</p><div class="who">— Verified patient</div></div>
-    <div class="rev" data-reveal><div class="stars">★★★★★</div><p>"Dr. Zmarai made sure I felt comfortable and informed throughout. Clean, calm and equipped with the latest technology. Highly recommend."</p><div class="who">— Verified patient</div></div>
+    <div class="rev" data-reveal><div class="stars">★★★★★</div><p>"After consulting three other dentists, it was a relief to find one who thoroughly examined the issue and treated it properly. Professional throughout, every step explained beforehand."</p><div class="who">— Verified patient [TODO: source]</div></div>
+    <div class="rev" data-reveal><div class="stars">★★★★★</div><p>"One of the best dental clinics — very professional, very modern equipment, and genuinely friendly staff. Looked after from the moment I walked in."</p><div class="who">— Verified patient [TODO: source]</div></div>
+    <div class="rev" data-reveal><div class="stars">★★★★★</div><p>"The dentist made sure I felt comfortable and informed throughout. Clean, calm and equipped with the latest technology. Highly recommend."</p><div class="who">— Verified patient [TODO: source]</div></div>
   </div>
 </div></section>
 
@@ -399,7 +535,7 @@ a{color:inherit;text-decoration:none}
     <div><a href="#" class="brand"><span class="mark"></span>Vestadent</a>
       <p class="foot-blurb">Digital implant and cosmetic dentistry in Kingsbury, North West London. Smiles designed before they're made.</p></div>
     <div class="foot-col"><h5>Treatments</h5><a href="#treatments">Dental implants</a><a href="#treatments">All-on-4 &amp; All-on-6</a><a href="#treatments">E.max veneers</a><a href="#treatments">Composite bonding</a><a href="#smile">Smile design</a></div>
-    <div class="foot-col"><h5>Clinic</h5><a href="#implant">Implants</a><a href="#why">Why Vestadent</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a><a href="tel:02033029290">0203 302 9290</a></div>
+    <div class="foot-col"><h5>Clinic</h5><a href="#implant">Implants</a><a href="#why">Why Vestadent</a><a href="#team">The team</a><a href="#practice">Inside the practice</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
     <div class="foot-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/cookie-policy">Cookie Policy</a><a href="/terms">Terms &amp; Conditions</a><a href="/complaints">Complaints Procedure</a><a href="/patient-charter">Patient Charter</a><a href="/accessibility">Accessibility</a></div>
   </div>
   <div class="foot-reg">
@@ -461,9 +597,10 @@ a{color:inherit;text-decoration:none}
     g.add(new THREE.Mesh(new THREE.CylinderGeometry(0.52,0.46,2.5,48),ti));            // body
     var tip=new THREE.Mesh(new THREE.ConeGeometry(0.46,0.7,48),ti);tip.position.y=-1.6;tip.rotation.x=Math.PI;g.add(tip);
     // threads — helix tube
-    function Helix(){THREE.Curve.call(this);}Helix.prototype=Object.create(THREE.Curve.prototype);
-    Helix.prototype.getPoint=function(t){var turns=9,a=t*turns*Math.PI*2,y=1.15-t*2.55,r=0.52-0.06*t;
-      return new THREE.Vector3(Math.cos(a)*r,y,Math.sin(a)*r);};
+    class Helix extends THREE.Curve{
+      getPoint(t){var turns=9,a=t*turns*Math.PI*2,y=1.15-t*2.55,r=0.52-0.06*t;
+        return new THREE.Vector3(Math.cos(a)*r,y,Math.sin(a)*r);}
+    }
     g.add(new THREE.Mesh(new THREE.TubeGeometry(new Helix(),420,0.07,8,false),ti));
     var abut=new THREE.Mesh(new THREE.CylinderGeometry(0.34,0.5,0.7,40),ti);abut.position.y=1.55;g.add(abut);
     var crown=new THREE.Mesh(new THREE.SphereGeometry(0.66,40,32),cer);crown.scale.set(1,0.78,1);crown.position.y=2.4;g.add(crown);
@@ -533,3 +670,5 @@ a{color:inherit;text-decoration:none}
   gsap.to('#footWord',{xPercent:-12,scrollTrigger:{trigger:'.foot',start:'top bottom',end:'bottom top',scrub:true}});
 })();
 </script>
+</body>
+</html>
