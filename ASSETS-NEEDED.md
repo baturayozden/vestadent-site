@@ -28,22 +28,22 @@ Current placeholder: `/img/placeholder-landscape.svg` (4:3, 4 slots)
 
 Target: landscape, min **1600×1200 px**, JPG.
 
-## 2. Team photography — `#team` "The team" section
-Current placeholder: `/img/placeholder-portrait.svg` (5:6 portrait, 3 slots)
+## 2. Before / after cases — `#smile` "Before & after" gallery
+Current images: `/img/before-after/case-01.jpg … case-12.jpg` (12 cases, 600×900).
 
-For **each** clinician we need:
-- A professional **headshot** (portrait, min **1000×1200 px**), `team-[surname].jpg`
-- **Full name** (as registered)
-- **Role / area of focus** (e.g. Principal Dentist, Implant Surgeon, Treatment Coordinator)
-- **GDC registration number** *(required for display — do not guess)*
+- These are **real cases from the wider clinic group (Dentafly)**, downloaded from
+  dentafly.com and optimised for web. They are labelled on-page as "cases from our
+  clinic group" — **not** presented as Vestadent London's own work.
+- **[TODO] Confirm written patient consent** covers republication on vestadent.co.uk.
+- **[TODO] ASA/GDC check:** ensure the gallery is genuine, representative and not
+  misleading. Remove any case without documented consent.
+- To add genuine **Vestadent London** cases later: drop consented 600×900 (2:3)
+  images into `/img/before-after/` and add `<figure class="ba-case">` entries.
 
-> These map to the `[TODO: clinician name] / [TODO: role] / GDC No. [TODO]` fields
-> in `index.html`. Add or remove member cards to match the actual team size.
-
-## 3. Before / after cases (optional, high value)
-- Real, **patient-consented** before/after photographs for the smile-design section.
-- Each pair needs documented written consent and ideally consistent framing/lighting.
-- Until supplied, the homepage keeps the illustrative CSS slider (labelled as such).
+## 3. Reviews — Trustpilot (`#reviews`)
+- The section uses the **official Trustpilot TrustBox widget** (live, not scraped).
+- **[TODO] Business Unit ID:** set `data-businessunit-id` on the widget from the
+  clinic group's **Trustpilot Business** account, and confirm the review URL.
 
 ## 4. Social share image — `/img/og-image.png`
 - A branded share card (1200×630) has been **generated** and is in place.
@@ -64,10 +64,10 @@ These are **not images** but are needed before the legal pages and schema go liv
 - **Data protection contact** (name/role) for the Privacy Policy
 - **Complaints Manager** name + acknowledgement/response timescales
 - **priceRange** and **geo coordinates** for the homepage `Dentist` schema (JSON-LD)
-- Clinician **names + GDC numbers**
 - Cancellation / missed-appointment policy and out-of-hours emergency arrangements
 - Confirmation of operational claims in the homepage stats
   ("same-day temporaries milled in-house", "100% metal-free")
-- Verified, attributed sources for the patient **reviews** (e.g. Google)
+- **Trustpilot Business Unit ID** for the reviews widget (clinic group account)
+- Written **patient consent** confirmation for the before/after gallery
 - Whether any **NHS** services are offered (affects the complaints route)
 - Whether any data **processors transfer data internationally** (Privacy Policy)
