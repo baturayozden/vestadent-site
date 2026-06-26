@@ -1,0 +1,49 @@
+/* Vestadent — shared stylesheet for legal / policy pages.
+   Reuses the same palette and type system as the homepage. */
+:root{
+  --ink:#0E1B28; --navy-900:#07203B; --navy-800:#0B2C4D; --navy-700:#103C5C;
+  --navy-600:#1B5580; --navy-500:#2E7BB0; --bone:#DCE8F2; --bone-bright:#EDF4FA;
+  --paper:#F7FAFD; --white:#FBFCFE; --cyan:#2BA6E0; --cyan-bright:#5FC2EC;
+  --line-dark:rgba(220,232,242,.16); --line-light:rgba(14,27,40,.12);
+  --display:'Newsreader',Georgia,serif; --body:'Plus Jakarta Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --maxw:780px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.65}
+a{color:var(--navy-600);text-decoration:underline;text-underline-offset:2px}
+a:hover{color:var(--cyan)}
+
+/* top bar */
+.lnav{position:sticky;top:0;z-index:10;background:rgba(7,32,59,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-dark)}
+.lnav-in{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:66px;display:flex;align-items:center;justify-content:space-between}
+.lbrand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:21px;font-weight:600;color:#fff;text-decoration:none}
+.lbrand .mark{width:26px;height:26px;display:inline-block;background-image:url(/logo.png);background-size:contain;background-position:center;background-repeat:no-repeat}
+.lback{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--bone);text-decoration:none}
+.lback:hover{color:var(--cyan-bright)}
+
+/* document */
+.ldoc{max-width:var(--maxw);margin:0 auto;padding:64px 28px 96px}
+.leyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);font-weight:500}
+.ldoc h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,52px);line-height:1.04;letter-spacing:-.015em;margin:16px 0 14px}
+.lmeta{font-family:var(--mono);font-size:12.5px;color:rgba(14,27,40,.55);margin-bottom:8px}
+.ldraft{display:inline-block;margin:14px 0 0;padding:8px 14px;border-radius:8px;background:#FFF4D6;border:1px solid #E7C766;color:#6B5410;font-size:13px;font-family:var(--mono)}
+.ldoc h2{font-family:var(--display);font-weight:500;font-size:clamp(22px,3.4vw,30px);letter-spacing:-.01em;margin:46px 0 12px;padding-top:8px}
+.ldoc h3{font-size:17px;font-weight:600;margin:28px 0 8px;color:var(--navy-700)}
+.ldoc p{margin:0 0 16px;color:rgba(14,27,40,.82)}
+.ldoc ul,.ldoc ol{margin:0 0 16px;padding-left:22px}
+.ldoc li{margin:0 0 8px;color:rgba(14,27,40,.82)}
+.ldoc strong{font-weight:600;color:var(--ink)}
+.ldoc .todo{background:#FFF4D6;border-bottom:1px dashed #C99A18;padding:0 3px;border-radius:3px;font-family:var(--mono);font-size:.9em;color:#6B5410}
+.lhr{border:none;border-top:1px solid var(--line-light);margin:40px 0}
+.lcard{background:var(--bone-bright);border:1px solid var(--line-light);border-radius:14px;padding:22px 24px;margin:24px 0}
+.lcard p:last-child{margin-bottom:0}
+
+/* footer */
+.lfoot{background:var(--navy-900);color:rgba(220,232,242,.66);padding:48px 0 34px}
+.lfoot-in{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.lfoot-links{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:22px}
+.lfoot-links a{color:rgba(220,232,242,.72);font-size:13.5px;text-decoration:none}
+.lfoot-links a:hover{color:var(--cyan-bright)}
+.lfoot-reg{font-size:12.5px;line-height:1.7;color:rgba(220,232,242,.5);max-width:680px}
+.lfoot-copy{margin-top:18px;font-family:var(--mono);font-size:11.5px;color:rgba(220,232,242,.4);letter-spacing:.04em}
