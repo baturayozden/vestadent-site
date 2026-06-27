@@ -29,32 +29,30 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vestadent.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://vestadent.co.uk/#treatments"}, {"@type": "ListItem", "position": 3, "name": "Dental Implants", "item": "https://vestadent.co.uk/treatments/dental-implants"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Dental Implants", "description": "Dental implants at Vestadent in Kingsbury, London — a permanent, natural-feeling way to replace one or more missing teeth, planned in 3D.", "url": "https://vestadent.co.uk/treatments/dental-implants", "about": {"@type": "MedicalProcedure", "name": "Dental implant placement"}, "isPartOf": {"@type": "WebSite", "name": "Vestadent", "url": "https://vestadent.co.uk/"}, "publisher": {"@type": "Dentist", "name": "Vestadent Clinic", "url": "https://vestadent.co.uk/", "telephone": "+442033029290", "address": {"@type": "PostalAddress", "streetAddress": "230 Church Lane", "addressLocality": "London", "postalCode": "NW9 8SN", "addressCountry": "GB"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Will it hurt?", "acceptedAnswer": {"@type": "Answer", "text": "The procedure is carried out under local anaesthetic, so you should be comfortable throughout. Mild tenderness or swelling afterwards is normal and usually settles within a few days with simple pain relief."}}, {"@type": "Question", "name": "How long do dental implants last?", "acceptedAnswer": {"@type": "Answer", "text": "With good oral hygiene and regular check-ups, implants can last many years. Longevity varies from person to person depending on gum health, bone and lifestyle."}}, {"@type": "Question", "name": "How much do dental implants cost?", "acceptedAnswer": {"@type": "Answer", "text": "The cost depends on your individual case — the number of implants, whether any bone grafting is needed, and the type of restoration. After your assessment we provide a clear, itemised written quote before any treatment begins."}}, {"@type": "Question", "name": "Am I too old for implants?", "acceptedAnswer": {"@type": "Answer", "text": "There's no upper age limit. What matters is your gum health, bone and general health, all of which we assess at your consultation."}}, {"@type": "Question", "name": "What if I don't have enough bone?", "acceptedAnswer": {"@type": "Answer", "text": "Bone grafting or a sinus lift can often rebuild the area so an implant can be placed. We'll let you know if this applies to you after your 3D scan."}}]}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="/treatment.js" defer></script>
 </head>
 <body>
-<div class="grain"></div><div class="cursor"></div><div class="cursor-r"></div>
+<div class="grain"></div><div class="cursor"></div><div class="cursor-r"></div><div class="prog"></div>
 <nav class="nav"><div class="nav-in">
   <a href="/" class="brand"><span class="mark"></span>Vestadent</a>
-  <div class="nav-links">
-    <a href="/#treatments">Treatments</a><a href="/#implant">Implants</a>
-    <a href="/#practice">Practice</a><a href="/#contact">Contact</a>
-  </div>
-  <div class="nav-right">
-    <a href="tel:02033029290" class="nav-tel">0203 302 9290</a>
-    <a href="/#contact" class="btn btn-cyan" style="padding:11px 22px">Book consultation</a>
-  </div>
+  <div class="nav-links"><a href="/#treatments">Treatments</a><a href="/#implant">Implants</a><a href="/#practice">Practice</a><a href="/#contact">Contact</a></div>
+  <div class="nav-right"><a href="tel:02033029290" class="nav-tel">0203 302 9290</a><a href="/#contact" class="btn btn-cyan" style="padding:11px 22px">Book consultation</a></div>
 </div></nav>
 <header class="t-hero">
-  <div class="aurora a1"></div><div class="aurora a2"></div>
-  <div class="wrap t-hero-in">
-    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/#treatments">Treatments</a> / <span>Dental Implants</span></nav>
-    <span class="eyebrow">Treatment</span>
-    <h1>Dental Implants</h1>
-    <p class="lede">A permanent, natural-feeling replacement for one or more missing teeth — planned in 3D and built to last.</p>
-    <div class="t-hero-cta">
-      <a href="/#contact" class="btn btn-cyan">Book a consultation <span class="arr">→</span></a>
-      <a href="tel:02033029290" class="btn btn-ghost">Call 0203 302 9290</a>
+  <div class="aurora a1" data-parallax="22"></div><div class="aurora a2" data-parallax="-12"></div>
+  <div class="wrap"><div class="t-hero-grid">
+    <div class="t-hero-copy">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/#treatments">Treatments</a> / <span>Dental Implants</span></nav>
+      <span class="eyebrow">Treatment</span>
+      <h1>Dental Implants</h1>
+      <p class="lede">A permanent, natural-feeling replacement for one or more missing teeth — planned in 3D and built to last.</p>
+      <div class="t-hero-cta"><a href="/#contact" class="btn btn-cyan">Book a consultation <span class="arr">→</span></a><a href="tel:02033029290" class="btn btn-ghost">Call 0203 302 9290</a></div>
     </div>
-  </div>
+    <div class="hero-visual" data-reveal><svg class="viz-arch" viewBox="0 0 400 400" preserveAspectRatio="none" aria-hidden="true"><path d="M28 332 C118 96 282 96 372 332"/></svg><div class="hero3d" id="hero3d" data-hero3d data-count="1" role="img" aria-label="Illustrative 3D model — Dental Implants"><div class="viz-fallback"><svg width="120" viewBox="0 0 80 200" fill="none" stroke="#5FC2EC" stroke-width="2" opacity=".5"><path d="M40 20v150M28 40h24M26 56h28M28 72h24M30 88h20"/><path d="M40 170c-6 0-10-6-10-12h20c0 6-4 12-10 12z"/></svg></div></div><span class="viz-tag">Illustrative 3D model</span><span class="viz-hint">Drag to rotate</span></div>
+  </div></div>
 </header>
 
 <section class="sec"><div class="wrap lead-col" data-reveal>
@@ -77,11 +75,22 @@
 
 <section class="sec"><div class="wrap">
   <div class="lead-col" data-reveal><span class="eyebrow kicker">How it works</span><h2>Your treatment journey.</h2></div>
-  <div class="steps">
-    <div class="step" data-reveal><div class="sn">01</div><h4>Consultation &amp; assessment</h4><p>A full examination with 3D (CBCT) imaging to assess your bone and plan the ideal implant position.</p></div>
-    <div class="step" data-reveal><div class="sn">02</div><h4>Digital planning</h4><p>Your case is planned on screen so the implant position is mapped precisely before treatment begins.</p></div>
-    <div class="step" data-reveal><div class="sn">03</div><h4>Implant placement</h4><p>The implant is placed under local anaesthetic. A healing period allows it to integrate with the bone.</p></div>
-    <div class="step" data-reveal><div class="sn">04</div><h4>Restoration &amp; aftercare</h4><p>Once healed, your custom crown is fitted. We review your bite and show you how to care for it long term.</p></div>
+  <div class="steps-wrap">
+    <svg class="steps-line" viewBox="0 0 1000 2" preserveAspectRatio="none" data-draw aria-hidden="true"><path d="M2 1 H998"/></svg>
+    <div class="steps">
+    <div class="step" data-reveal><span class="dot"></span><div class="sn">01</div><h4>Consultation &amp; assessment</h4><p>A full examination with 3D (CBCT) imaging to assess your bone and plan the ideal implant position.</p></div>
+    <div class="step" data-reveal><span class="dot"></span><div class="sn">02</div><h4>Digital planning</h4><p>Your case is planned on screen so the implant position is mapped precisely before treatment begins.</p></div>
+    <div class="step" data-reveal><span class="dot"></span><div class="sn">03</div><h4>Implant placement</h4><p>The implant is placed under local anaesthetic. A healing period allows it to integrate with the bone.</p></div>
+    <div class="step" data-reveal><span class="dot"></span><div class="sn">04</div><h4>Restoration &amp; aftercare</h4><p>Once healed, your custom crown is fitted. We review your bite and show you how to care for it long term.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+  <div class="lead-col" data-reveal><span class="eyebrow kicker">Anatomy</span><h2>How it fits together.</h2></div>
+  <div class="anatomy">
+    <div class="anatomy-fig" data-reveal><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet" data-draw aria-hidden="true"><path class="stroke-c" opacity=".4" d="M44 198 H356"/><path class="stroke-c" opacity=".22" d="M74 198 V352 H326 V198"/><path class="stroke-c" opacity=".18" d="M74 244 H326 M74 290 H326 M74 336 H326"/><path class="tooth-body" stroke="#5FC2EC" stroke-width="2.4" d="M200 64 C168 64 162 112 168 152 C150 158 150 196 200 196 C250 196 250 158 232 152 C238 112 232 64 200 64Z"/><rect x="190" y="168" width="20" height="156" rx="8" class="stroke-c"/><path class="stroke-c" opacity=".6" d="M190 200 H210 M190 234 H210 M190 268 H210 M190 302 H210"/></svg></div>
+    <div class="anatomy-cap" data-reveal><span class="l">Schematic illustration</span><p>A titanium post integrates with the jawbone to act as a new tooth root, supporting the crown that sits above the gum line.</p></div>
   </div>
 </div></section>
 
@@ -106,8 +115,7 @@
 </div></section>
 
 <section class="sec dark"><div class="wrap">
-  <div class="lead-col" data-reveal><span class="eyebrow kicker">Materials &amp; technology</span>
-  <h2>Built with quality materials.</h2>
+  <div class="lead-col" data-reveal><span class="eyebrow kicker">Materials &amp; technology</span><h2>Built with quality materials.</h2>
   <p>We use established, globally recognised implant systems and plan every placement digitally.</p></div>
   <ul class="spec" data-reveal>
     <li><b>Implant post</b><span>Medical-grade titanium</span></li>
@@ -115,6 +123,7 @@
     <li><b>Planning</b><span>3D (CBCT) guided placement</span></li>
   </ul>
 </div></section>
+
 <section class="sec"><div class="wrap">
   <div class="lead-col" data-reveal><span class="eyebrow kicker">FAQ</span><h2>Common questions.</h2></div>
   <div class="faq" data-reveal>
@@ -127,6 +136,14 @@
 </div></section>
 
 <section class="sec alt"><div class="wrap">
+  <div class="lead-col" data-reveal><span class="eyebrow kicker">At the practice</span><h2>Where your care happens.</h2>
+  <p>The visuals on this page are illustrative. Real photographs of our Kingsbury clinic — and genuine, consented before &amp; after cases — are added before launch.</p></div>
+  <!-- TODO: replace placeholder with real clinic / equipment photos and consented case images (see ASSETS-NEEDED.md). No stock or AI imagery. -->
+  <div class="photo-slot" data-reveal><img src="/img/placeholder-landscape.svg" alt="Vestadent clinic in Kingsbury — photograph to be supplied" width="1280" height="720" loading="lazy"></div>
+  <p class="photo-note">Illustrative/CGI graphics are used to explain treatment. We do not show stock or AI-generated patient, clinical or before &amp; after imagery — only genuine, consented photographs will appear here.</p>
+</div></section>
+
+<section class="sec"><div class="wrap">
   <div class="lead-col" data-reveal><span class="eyebrow kicker">Related</span><h2>Related treatments.</h2></div>
   <div class="related">
     <a class="rcard" href="/treatments/all-on-4-all-on-6" data-reveal><h4>All-on-4 &amp; All-on-6</h4><p>A fixed, full set of teeth on four or six implants.</p><span class="go">Learn more →</span></a>
@@ -148,12 +165,11 @@
     <div class="foot-col"><h5>Treatments</h5><a href="/treatments/all-on-4-all-on-6">All-on-4 &amp; All-on-6</a><a href="/treatments/dental-implants">Dental Implants</a><a href="/treatments/emax-veneers">E.max Veneers</a><a href="/treatments/zirconium-crowns">Zirconium Crowns</a><a href="/treatments/composite-bonding">Composite Bonding</a><a href="/treatments/hollywood-smile">Hollywood Smile</a><a href="/treatments/robotic-implant">Robotic Implant Surgery</a><a href="/treatments/oral-surgery">Oral Surgery</a><a href="/treatments/teeth-whitening">Teeth Whitening</a></div>
     <div class="foot-col"><h5>Practice</h5><a href="/">Home</a><a href="/#contact">Contact</a><a href="/privacy-policy">Privacy</a><a href="/cookie-policy">Cookies</a><a href="/terms">Terms</a><a href="/complaints">Complaints</a><a href="/patient-charter">Patient Charter</a><a href="/accessibility">Accessibility</a></div>
   </div>
-  <div class="foot-reg">Vestadent Clinic is operated by Vestadent Limited (registered in England &amp; Wales, company no. 12993512). All dentists are registered with the General Dental Council (GDC). The practice is regulated by the Care Quality Commission (CQC) and registered with the Information Commissioner's Office (ICO, reference ZC111000). Patient information on this site is for general guidance and does not constitute a diagnosis or treatment plan.</div>
-  <div class="foot-bot" style="display:flex;justify-content:space-between;align-items:center;padding-top:22px;gap:14px;flex-wrap:wrap">
+  <div class="foot-reg">Vestadent Clinic is operated by Vestadent Limited (registered in England &amp; Wales, company no. 12993512). All dentists are registered with the General Dental Council (GDC). The practice is regulated by the Care Quality Commission (CQC) and registered with the Information Commissioner's Office (ICO, reference ZC111000). Illustrations on this page are representative; they are not photographs of patients or specific results.</div>
+  <div class="foot-bot">
     <div class="foot-legal"><a href="/privacy-policy">Privacy</a><a href="/cookie-policy">Cookies</a><a href="/terms">Terms</a><a href="/complaints">Complaints</a><a href="/accessibility">Accessibility</a></div>
     <div class="foot-copy">© 2026 Vestadent Limited · 230 Church Lane, London NW9 8SN</div>
   </div>
 </div></footer>
-<script src="/treatment.js" defer></script>
 </body>
 </html>

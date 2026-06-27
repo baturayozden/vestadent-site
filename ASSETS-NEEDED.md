@@ -28,6 +28,11 @@ Current placeholder: `/img/placeholder-landscape.svg` (4:3, 4 slots)
 
 Target: landscape, min **1600×1200 px**, JPG.
 
+> Each of the 9 `/treatments/*` pages also has an **"At the practice" photo slot**
+> (16:9, currently `/img/placeholder-landscape.svg`) for a real clinic/equipment
+> photo. The hero visuals there are deliberately illustrative (3D / schematic SVG) —
+> **do not** fill these slots with stock or AI imagery; consented real photos only.
+
 ## 2. Before / after cases — `#smile` "Before & after" gallery
 Current images: `/img/before-after/case-01.jpg … case-12.jpg` (12 cases, 600×900).
 

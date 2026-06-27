@@ -29,32 +29,29 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vestadent.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://vestadent.co.uk/#treatments"}, {"@type": "ListItem", "position": 3, "name": "Oral Surgery", "item": "https://vestadent.co.uk/treatments/oral-surgery"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Oral Surgery", "description": "Oral surgery at Vestadent, Kingsbury London — extractions, wisdom teeth, bone grafting and corrective procedures in safe, experienced hands.", "url": "https://vestadent.co.uk/treatments/oral-surgery", "about": {"@type": "MedicalProcedure", "name": "Oral and surgical dental procedures"}, "isPartOf": {"@type": "WebSite", "name": "Vestadent", "url": "https://vestadent.co.uk/"}, "publisher": {"@type": "Dentist", "name": "Vestadent Clinic", "url": "https://vestadent.co.uk/", "telephone": "+442033029290", "address": {"@type": "PostalAddress", "streetAddress": "230 Church Lane", "addressLocality": "London", "postalCode": "NW9 8SN", "addressCountry": "GB"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Will the procedure be painful?", "acceptedAnswer": {"@type": "Answer", "text": "Procedures are carried out under local anaesthetic so you should be comfortable at the time. Some discomfort or swelling during healing is normal and managed with simple measures and aftercare."}}, {"@type": "Question", "name": "How long is recovery?", "acceptedAnswer": {"@type": "Answer", "text": "Recovery varies depending on the procedure and the individual. We'll give you specific aftercare advice and a realistic idea of what to expect."}}, {"@type": "Question", "name": "Do I need my wisdom teeth removed?", "acceptedAnswer": {"@type": "Answer", "text": "Not always — only if they're causing problems such as pain, infection or crowding. We'll assess and recommend removal only when it's in your interest."}}, {"@type": "Question", "name": "What is bone grafting?", "acceptedAnswer": {"@type": "Answer", "text": "Bone grafting rebuilds bone in an area that has lost volume, often to allow a dental implant to be placed. We'll let you know if you need it after your scan."}}, {"@type": "Question", "name": "How much will it cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the specific procedure. We provide a written quote once we've assessed you."}}]}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="/treatment.js" defer></script>
 </head>
 <body>
-<div class="grain"></div><div class="cursor"></div><div class="cursor-r"></div>
+<div class="grain"></div><div class="cursor"></div><div class="cursor-r"></div><div class="prog"></div>
 <nav class="nav"><div class="nav-in">
   <a href="/" class="brand"><span class="mark"></span>Vestadent</a>
-  <div class="nav-links">
-    <a href="/#treatments">Treatments</a><a href="/#implant">Implants</a>
-    <a href="/#practice">Practice</a><a href="/#contact">Contact</a>
-  </div>
-  <div class="nav-right">
-    <a href="tel:02033029290" class="nav-tel">0203 302 9290</a>
-    <a href="/#contact" class="btn btn-cyan" style="padding:11px 22px">Book consultation</a>
-  </div>
+  <div class="nav-links"><a href="/#treatments">Treatments</a><a href="/#implant">Implants</a><a href="/#practice">Practice</a><a href="/#contact">Contact</a></div>
+  <div class="nav-right"><a href="tel:02033029290" class="nav-tel">0203 302 9290</a><a href="/#contact" class="btn btn-cyan" style="padding:11px 22px">Book consultation</a></div>
 </div></nav>
 <header class="t-hero">
-  <div class="aurora a1"></div><div class="aurora a2"></div>
-  <div class="wrap t-hero-in">
-    <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/#treatments">Treatments</a> / <span>Oral Surgery</span></nav>
-    <span class="eyebrow">Treatment</span>
-    <h1>Oral Surgery</h1>
-    <p class="lede">Extractions, wisdom teeth, bone grafting and corrective procedures — in safe, experienced hands.</p>
-    <div class="t-hero-cta">
-      <a href="/#contact" class="btn btn-cyan">Book a consultation <span class="arr">→</span></a>
-      <a href="tel:02033029290" class="btn btn-ghost">Call 0203 302 9290</a>
+  <div class="aurora a1" data-parallax="22"></div><div class="aurora a2" data-parallax="-12"></div>
+  <div class="wrap"><div class="t-hero-grid">
+    <div class="t-hero-copy">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/#treatments">Treatments</a> / <span>Oral Surgery</span></nav>
+      <span class="eyebrow">Treatment</span>
+      <h1>Oral Surgery</h1>
+      <p class="lede">Extractions, wisdom teeth, bone grafting and corrective procedures — in safe, experienced hands.</p>
+      <div class="t-hero-cta"><a href="/#contact" class="btn btn-cyan">Book a consultation <span class="arr">→</span></a><a href="tel:02033029290" class="btn btn-ghost">Call 0203 302 9290</a></div>
     </div>
-  </div>
+    <div class="hero-visual" data-reveal><svg class="viz-arch" viewBox="0 0 400 400" preserveAspectRatio="none" aria-hidden="true"><path d="M28 332 C118 96 282 96 372 332"/></svg><svg class="viz viz-surgery viz-float" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet" data-draw aria-hidden="true"><path class="stroke-c" opacity=".45" d="M56 250 H344"/><path class="stroke-c" d="M168 250 C168 196 176 150 200 150 C224 150 232 196 232 250"/><path class="stroke-c" d="M188 250 L181 332"/><path class="stroke-c" d="M212 250 L219 332"/><path class="stroke-c" opacity=".4" d="M120 196 H280"/></svg><span class="viz-tag">Schematic illustration</span></div>
+  </div></div>
 </header>
 
 <section class="sec"><div class="wrap lead-col" data-reveal>
@@ -77,11 +74,14 @@
 
 <section class="sec"><div class="wrap">
   <div class="lead-col" data-reveal><span class="eyebrow kicker">How it works</span><h2>Your treatment journey.</h2></div>
-  <div class="steps">
-    <div class="step" data-reveal><div class="sn">01</div><h4>Consultation &amp; imaging</h4><p>We assess the area, often with 3D imaging, and explain what the procedure involves.</p></div>
-    <div class="step" data-reveal><div class="sn">02</div><h4>Planning</h4><p>The procedure is planned around your anatomy and overall treatment goals.</p></div>
-    <div class="step" data-reveal><div class="sn">03</div><h4>Procedure</h4><p>Carried out under local anaesthetic with your comfort prioritised throughout.</p></div>
-    <div class="step" data-reveal><div class="sn">04</div><h4>Recovery &amp; aftercare</h4><p>Clear aftercare instructions and follow-up to support smooth healing.</p></div>
+  <div class="steps-wrap">
+    <svg class="steps-line" viewBox="0 0 1000 2" preserveAspectRatio="none" data-draw aria-hidden="true"><path d="M2 1 H998"/></svg>
+    <div class="steps">
+    <div class="step" data-reveal><span class="dot"></span><div class="sn">01</div><h4>Consultation &amp; imaging</h4><p>We assess the area, often with 3D imaging, and explain what the procedure involves.</p></div>
+    <div class="step" data-reveal><span class="dot"></span><div class="sn">02</div><h4>Planning</h4><p>The procedure is planned around your anatomy and overall treatment goals.</p></div>
+    <div class="step" data-reveal><span class="dot"></span><div class="sn">03</div><h4>Procedure</h4><p>Carried out under local anaesthetic with your comfort prioritised throughout.</p></div>
+    <div class="step" data-reveal><span class="dot"></span><div class="sn">04</div><h4>Recovery &amp; aftercare</h4><p>Clear aftercare instructions and follow-up to support smooth healing.</p></div>
+    </div>
   </div>
 </div></section>
 
@@ -117,6 +117,14 @@
 </div></section>
 
 <section class="sec alt"><div class="wrap">
+  <div class="lead-col" data-reveal><span class="eyebrow kicker">At the practice</span><h2>Where your care happens.</h2>
+  <p>The visuals on this page are illustrative. Real photographs of our Kingsbury clinic — and genuine, consented before &amp; after cases — are added before launch.</p></div>
+  <!-- TODO: replace placeholder with real clinic / equipment photos and consented case images (see ASSETS-NEEDED.md). No stock or AI imagery. -->
+  <div class="photo-slot" data-reveal><img src="/img/placeholder-landscape.svg" alt="Vestadent clinic in Kingsbury — photograph to be supplied" width="1280" height="720" loading="lazy"></div>
+  <p class="photo-note">Illustrative/CGI graphics are used to explain treatment. We do not show stock or AI-generated patient, clinical or before &amp; after imagery — only genuine, consented photographs will appear here.</p>
+</div></section>
+
+<section class="sec"><div class="wrap">
   <div class="lead-col" data-reveal><span class="eyebrow kicker">Related</span><h2>Related treatments.</h2></div>
   <div class="related">
     <a class="rcard" href="/treatments/dental-implants" data-reveal><h4>Dental Implants</h4><p>A permanent, natural-feeling replacement for missing teeth.</p><span class="go">Learn more →</span></a>
@@ -138,12 +146,11 @@
     <div class="foot-col"><h5>Treatments</h5><a href="/treatments/all-on-4-all-on-6">All-on-4 &amp; All-on-6</a><a href="/treatments/dental-implants">Dental Implants</a><a href="/treatments/emax-veneers">E.max Veneers</a><a href="/treatments/zirconium-crowns">Zirconium Crowns</a><a href="/treatments/composite-bonding">Composite Bonding</a><a href="/treatments/hollywood-smile">Hollywood Smile</a><a href="/treatments/robotic-implant">Robotic Implant Surgery</a><a href="/treatments/oral-surgery">Oral Surgery</a><a href="/treatments/teeth-whitening">Teeth Whitening</a></div>
     <div class="foot-col"><h5>Practice</h5><a href="/">Home</a><a href="/#contact">Contact</a><a href="/privacy-policy">Privacy</a><a href="/cookie-policy">Cookies</a><a href="/terms">Terms</a><a href="/complaints">Complaints</a><a href="/patient-charter">Patient Charter</a><a href="/accessibility">Accessibility</a></div>
   </div>
-  <div class="foot-reg">Vestadent Clinic is operated by Vestadent Limited (registered in England &amp; Wales, company no. 12993512). All dentists are registered with the General Dental Council (GDC). The practice is regulated by the Care Quality Commission (CQC) and registered with the Information Commissioner's Office (ICO, reference ZC111000). Patient information on this site is for general guidance and does not constitute a diagnosis or treatment plan.</div>
-  <div class="foot-bot" style="display:flex;justify-content:space-between;align-items:center;padding-top:22px;gap:14px;flex-wrap:wrap">
+  <div class="foot-reg">Vestadent Clinic is operated by Vestadent Limited (registered in England &amp; Wales, company no. 12993512). All dentists are registered with the General Dental Council (GDC). The practice is regulated by the Care Quality Commission (CQC) and registered with the Information Commissioner's Office (ICO, reference ZC111000). Illustrations on this page are representative; they are not photographs of patients or specific results.</div>
+  <div class="foot-bot">
     <div class="foot-legal"><a href="/privacy-policy">Privacy</a><a href="/cookie-policy">Cookies</a><a href="/terms">Terms</a><a href="/complaints">Complaints</a><a href="/accessibility">Accessibility</a></div>
     <div class="foot-copy">© 2026 Vestadent Limited · 230 Church Lane, London NW9 8SN</div>
   </div>
 </div></footer>
-<script src="/treatment.js" defer></script>
 </body>
 </html>
