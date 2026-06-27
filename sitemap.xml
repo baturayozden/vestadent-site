@@ -66,8 +66,27 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://vestadent.co.uk/privacy-policy</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/cookie-policy</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/accessibility</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
   <!--
-    Still noindex (omitted until solicitor sign-off / open TODOs closed):
-    /privacy-policy, /cookie-policy, /complaints, /patient-charter, /accessibility
+    Still noindex (omitted) until their pending items are confirmed:
+    /complaints      — NHS status pending confirmation
+    /patient-charter — late-cancellation [FEE] + out-of-hours arrangements pending
   -->
 </urlset>
