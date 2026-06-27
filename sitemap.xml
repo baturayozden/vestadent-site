@@ -84,9 +84,16 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <!--
-    Still noindex (omitted) until their pending items are confirmed:
-    /complaints      — NHS status pending confirmation
-    /patient-charter — late-cancellation [FEE] + out-of-hours arrangements pending
-  -->
+  <url>
+    <loc>https://vestadent.co.uk/complaints</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://vestadent.co.uk/patient-charter</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
