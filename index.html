@@ -250,6 +250,38 @@ a{color:inherit;text-decoration:none}
 .map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.04)}
 .contact-cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
 
+/* BOOKING FORM */
+.booking{margin-top:36px;background:#fff;border:1px solid var(--line-light);border-radius:24px;padding:40px 40px 36px;box-shadow:0 24px 60px rgba(11,44,77,.08)}
+.booking-head{max-width:620px;margin-bottom:26px}
+.booking-head .eyebrow{color:var(--cyan)}
+.booking-head h3{font-family:var(--display);font-weight:500;font-size:clamp(24px,3vw,34px);letter-spacing:-.01em;margin:12px 0 10px}
+.booking-head p{font-size:15px;color:rgba(14,27,40,.66);line-height:1.6}
+.booking-head a{color:var(--navy-600);text-decoration:underline;text-underline-offset:2px}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+.bgrid .field{margin-bottom:0}
+.field>span{font-size:13px;font-weight:500;color:var(--ink)}
+.field i{color:var(--cyan);font-style:normal}
+.field input,.field select,.field textarea{font-family:var(--body);font-size:15px;color:var(--ink);background:var(--paper);
+  border:1px solid var(--line-light);border-radius:12px;padding:13px 15px;width:100%;transition:border-color .25s,box-shadow .25s}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(43,166,224,.15)}
+.field input:user-invalid,.field input:focus:invalid{border-color:#d4574e}
+.consent{display:flex;gap:11px;align-items:flex-start;font-size:13.5px;color:rgba(14,27,40,.74);line-height:1.5;margin-bottom:22px;cursor:pointer}
+.consent input{margin-top:2px;width:17px;height:17px;flex:0 0 17px;accent-color:var(--cyan)}
+.consent a{color:var(--navy-600);text-decoration:underline;text-underline-offset:2px}
+.consent i{color:var(--cyan);font-style:normal}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.bform-foot{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.bform-foot .btn{border:none}
+.bnote{font-size:12.5px;color:rgba(14,27,40,.55);line-height:1.5;max-width:340px}
+.bnote a{color:var(--navy-600)}
+.bform-msg{margin-top:6px;font-size:14.5px;line-height:1.55;border-radius:12px;transition:all .3s}
+.bform-msg.ok{margin-top:20px;padding:16px 18px;background:#E6F6EC;border:1px solid #9AD9B0;color:#1B6B3A}
+.bform-msg.err{margin-top:20px;padding:16px 18px;background:#FBEAE8;border:1px solid #E7B0AA;color:#9A3128}
+.bform-msg a{color:inherit;font-weight:600;text-decoration:underline}
+@media(max-width:680px){.booking{padding:28px 22px}.bgrid{grid-template-columns:1fr}}
+
 /* FOOTER */
 .foot{background:var(--navy-900);color:rgba(220,232,242,.7);padding:80px 0 30px;overflow:hidden}
 .foot-word{font-family:var(--display);font-weight:600;font-size:clamp(70px,18vw,260px);line-height:.8;letter-spacing:-.03em;color:rgba(220,232,242,.06);white-space:nowrap;margin:0 0 58px;will-change:transform}
@@ -291,7 +323,7 @@ a{color:inherit;text-decoration:none}
 <nav class="nav" id="nav"><div class="wrap nav-in">
   <a href="#" class="brand"><span class="mark"></span>Vestadent</a>
   <div class="nav-links">
-    <a href="#treatments">Treatments</a><a href="#implant">Implants</a>
+    <a href="#treatments">Treatments</a><a href="/treatments/dental-implants">Implants</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="nav-right">
@@ -372,7 +404,7 @@ a{color:inherit;text-decoration:none}
         <li><b>Placement</b><span>3D-guided, sub-mm</span></li>
         <li><b>Longevity</b><span>Decades with care</span></li>
       </ul>
-      <a href="#contact" class="btn btn-dark">Book an implant consultation <span class="arr">→</span></a>
+      <a href="/treatments/dental-implants" class="btn btn-dark">Explore dental implants <span class="arr">→</span></a>
     </div>
   </div>
 </div></section>
@@ -475,7 +507,45 @@ a{color:inherit;text-decoration:none}
         <a href="https://maps.app.goo.gl/Gg4Vhe1HU1Uxnw1R6" target="_blank" class="btn btn-dark">Get directions</a>
       </div>
     </div>
-    <div class="map" data-reveal><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=230%20Church%20Lane%20London%20NW9%208SN&t=m&z=15&output=embed&iwloc=near"></iframe></div>
+    <div class="map" data-reveal><iframe title="Map showing the clinic location" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.731858582179!2d-0.2644293233759667!3d51.57314897182833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876111e0031ddd1%3A0x6e7f0704df6a6f86!2sDentafly%20Dental%20Clinic%20-%20London!5e0!3m2!1sen!2suk!4v1782599565811!5m2!1sen!2suk"></iframe></div>
+  </div>
+
+  <div class="booking" id="book" data-reveal>
+    <div class="booking-head">
+      <span class="eyebrow">Book a consultation</span>
+      <h3>Request your appointment</h3>
+      <p>Tell us a little about what you're looking for and we'll get back to you to arrange a consultation. We only use your details to respond to your enquiry — see our <a href="/privacy-policy">Privacy Policy</a>.</p>
+    </div>
+    <form id="bookForm" class="bform" novalidate>
+      <div class="bgrid">
+        <label class="field"><span>Name <i>*</i></span><input name="name" type="text" required autocomplete="name" maxlength="100"></label>
+        <label class="field"><span>Phone <i>*</i></span><input name="phone" type="tel" required autocomplete="tel" maxlength="40"></label>
+        <label class="field"><span>Email <i>*</i></span><input name="email" type="email" required autocomplete="email" maxlength="120"></label>
+        <label class="field"><span>Treatment of interest</span>
+          <select name="treatment">
+            <option value="">Select…</option>
+            <option>Dental implants</option>
+            <option>All-on-4 / All-on-6</option>
+            <option>E.max veneers</option>
+            <option>Zirconium crowns</option>
+            <option>Composite bonding</option>
+            <option>Hollywood smile</option>
+            <option>Robotic implant surgery</option>
+            <option>Oral surgery</option>
+            <option>Teeth whitening</option>
+            <option>Not sure / general enquiry</option>
+          </select>
+        </label>
+      </div>
+      <label class="field"><span>Message</span><textarea name="message" rows="4" maxlength="2000" placeholder="Anything you'd like us to know (optional)"></textarea></label>
+      <label class="consent"><input type="checkbox" name="consent" required value="yes"><span>I agree that Vestadent may use the details above to contact me about my enquiry, in line with the <a href="/privacy-policy">Privacy Policy</a>. <i>*</i></span></label>
+      <div class="hp" aria-hidden="true"><label>Company<input name="company" tabindex="-1" autocomplete="off"></label></div>
+      <div class="bform-foot">
+        <button type="submit" class="btn btn-cyan">Request consultation <span class="arr">→</span></button>
+        <p class="bnote">We aim to reply within one working day. For anything urgent, call <a href="tel:02033029290">0203 302 9290</a>.</p>
+      </div>
+      <div class="bform-msg" id="bookMsg" role="status" aria-live="polite"></div>
+    </form>
   </div>
 </div></section>
 
@@ -486,7 +556,7 @@ a{color:inherit;text-decoration:none}
     <div><a href="#" class="brand"><span class="mark"></span>Vestadent</a>
       <p class="foot-blurb">Digital implant and cosmetic dentistry in Kingsbury, North West London. Smiles designed before they're made.</p></div>
     <div class="foot-col"><h5>Treatments</h5><a href="/treatments/dental-implants">Dental implants</a><a href="/treatments/all-on-4-all-on-6">All-on-4 &amp; All-on-6</a><a href="/treatments/emax-veneers">E.max veneers</a><a href="/treatments/composite-bonding">Composite bonding</a><a href="/treatments/hollywood-smile">Hollywood smile</a></div>
-    <div class="foot-col"><h5>Clinic</h5><a href="#implant">Implants</a><a href="#why">Why Vestadent</a><a href="#practice">Inside the practice</a><a href="#contact">Contact</a></div>
+    <div class="foot-col"><h5>Clinic</h5><a href="/treatments/dental-implants">Implants</a><a href="#why">Why Vestadent</a><a href="#practice">Inside the practice</a><a href="#contact">Contact</a></div>
     <div class="foot-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/cookie-policy">Cookie Policy</a><a href="/terms">Terms &amp; Conditions</a><a href="/complaints">Complaints Procedure</a><a href="/patient-charter">Patient Charter</a><a href="/accessibility">Accessibility</a></div>
   </div>
   <div class="foot-reg">
@@ -600,6 +670,32 @@ a{color:inherit;text-decoration:none}
       gsap.to({v:0},{v:end,duration:1.6,ease:'power2.out',onUpdate:function(){el.textContent=Math.round(this.targets()[0].v)+suf;}});}});});
 
   gsap.to('#footWord',{xPercent:-12,scrollTrigger:{trigger:'.foot',start:'top bottom',end:'bottom top',scrub:true}});
+})();
+</script>
+
+<script>
+/* Booking form — posts to /api/contact; graceful fallback if email isn't configured. */
+(function(){
+  var f=document.getElementById('bookForm'); if(!f)return;
+  var msg=document.getElementById('bookMsg'), btn=f.querySelector('button[type=submit]');
+  function show(kind,html){msg.className='bform-msg'+(kind?' '+kind:'');msg.innerHTML=html;}
+  var FALLBACK='Sorry, our online form isn’t available right now. Please call us on <a href="tel:02033029290">0203 302 9290</a> or email <a href="mailto:info@vestadent.co.uk">info@vestadent.co.uk</a>.';
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); show('','');
+    var data=Object.fromEntries(new FormData(f).entries());
+    if(data.company){show('ok','Thank you — we’ve received your enquiry.');f.reset();return;} /* honeypot */
+    if(!data.name||!data.phone||!data.email||data.consent!=='yes'){show('err','Please complete the required fields and accept the privacy notice.');return;}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(data.email)){show('err','Please enter a valid email address.');return;}
+    btn.disabled=true; var old=btn.innerHTML; btn.innerHTML='Sending…';
+    fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {status:r.status,j:j};});})
+      .then(function(res){
+        if(res.status===200&&res.j.ok){f.reset();show('ok','Thank you — we’ve received your enquiry and will be in touch soon.');}
+        else{show('err',(res.j&&res.j.message)||FALLBACK);}
+      })
+      .catch(function(){show('err',FALLBACK);})
+      .then(function(){btn.disabled=false;btn.innerHTML=old;});
+  });
 })();
 </script>
 </body>
