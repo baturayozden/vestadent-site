@@ -79,7 +79,8 @@
 :root{
   --ink:#0E1B28; --navy-900:#07203B; --navy-800:#0B2C4D; --navy-700:#103C5C;
   --navy-600:#1B5580; --navy-500:#2E7BB0; --bone:#DCE8F2; --bone-bright:#EDF4FA;
-  --paper:#F7FAFD; --white:#FBFCFE; --cyan:#2BA6E0; --cyan-bright:#5FC2EC;
+  --paper:#F7FAFD; --white:#FBFCFE; --cyan:#C8A96A; --cyan-bright:#E7D6B4;
+  --navy:#1D4D82; --gold:#C8A96A; --gold-soft:#E7D6B4; --ice:#EDF4FA; --line:#E2E9F0; --muted:#5A6B7B;
   --line-dark:rgba(220,232,242,.16); --line-light:rgba(14,27,40,.10);
   --display:'Newsreader',Georgia,serif; --body:'Plus Jakarta Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
   --maxw:1240px; --e-expo:cubic-bezier(.16,1,.3,1); --e-quart:cubic-bezier(.76,0,.24,1);
@@ -96,8 +97,8 @@ a{color:inherit;text-decoration:none}
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");mix-blend-mode:overlay}
 .cursor,.cursor-r{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%);will-change:transform}
 .cursor{width:7px;height:7px;background:var(--cyan-bright)}
-.cursor-r{width:36px;height:36px;border:1px solid rgba(43,166,224,.6);transition:width .35s var(--e-expo),height .35s var(--e-expo),background .35s,border-color .35s}
-.cursor-r.big{width:64px;height:64px;background:rgba(43,166,224,.08);border-color:transparent}
+.cursor-r{width:36px;height:36px;border:1px solid rgba(200,169,106,.6);transition:width .35s var(--e-expo),height .35s var(--e-expo),background .35s,border-color .35s}
+.cursor-r.big{width:64px;height:64px;background:rgba(200,169,106,.08);border-color:transparent}
 @media(hover:none){.cursor,.cursor-r{display:none}}
 .prog{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--cyan),var(--cyan-bright));z-index:60}
 
@@ -106,8 +107,10 @@ a{color:inherit;text-decoration:none}
   padding:15px 28px;border-radius:999px;border:none;cursor:pointer;white-space:nowrap;
   transition:background .3s,color .3s,box-shadow .3s,transform .4s var(--e-expo)}
 .btn:hover{transform:translateY(-2px)}
-.btn-cyan{background:var(--cyan);color:#fff;box-shadow:0 8px 26px rgba(43,166,224,.32)}
-.btn-cyan:hover{background:#1F95CE;box-shadow:0 14px 38px rgba(43,166,224,.42)}
+.btn-cyan{background:var(--navy-900);color:#fff;box-shadow:0 8px 26px rgba(7,32,59,.22)}
+.btn-cyan:hover{background:var(--navy-800);box-shadow:0 14px 38px rgba(7,32,59,.30)}
+.btn-gold{background:var(--gold);color:var(--navy-900);white-space:nowrap}
+.btn-gold:hover{background:var(--gold-soft)}
 .btn-ghost{background:transparent;color:var(--bone);border:1px solid var(--line-dark)}
 .btn-ghost:hover{border-color:var(--cyan-bright);color:var(--cyan-bright)}
 .btn-dark{background:var(--navy-700);color:var(--bone)}.btn-dark:hover{background:var(--navy-600)}
@@ -134,7 +137,7 @@ a{color:inherit;text-decoration:none}
   background:linear-gradient(168deg,var(--navy-800),var(--navy-900) 62%,#051428);overflow:hidden;isolation:isolate;padding:120px 0 60px}
 .aurora{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;z-index:0;will-change:transform}
 .a1{width:620px;height:620px;background:radial-gradient(circle,#1B5580,transparent 68%);top:-160px;right:-120px;animation:drift1 18s var(--e-quart) infinite alternate}
-.a2{width:520px;height:520px;background:radial-gradient(circle,rgba(95,194,236,.5),transparent 66%);bottom:-200px;left:-120px;opacity:.34;animation:drift2 22s var(--e-quart) infinite alternate}
+.a2{width:520px;height:520px;background:radial-gradient(circle,rgba(231,214,180,.45),transparent 66%);bottom:-200px;left:-120px;opacity:.34;animation:drift2 22s var(--e-quart) infinite alternate}
 .a3{width:400px;height:400px;background:radial-gradient(circle,#2E7BB0,transparent 70%);top:38%;left:42%;opacity:.3;animation:drift1 26s ease-in-out infinite alternate}
 @keyframes drift1{to{transform:translate(-60px,50px) scale(1.12)}}
 @keyframes drift2{to{transform:translate(70px,-40px) scale(1.08)}}
@@ -168,7 +171,33 @@ a{color:inherit;text-decoration:none}
 .sec-head p{margin-top:20px;font-size:17px;color:rgba(14,27,40,.64);max-width:580px}
 
 /* TREATMENTS grid */
-.treat{background:var(--bone-bright)}
+.treat{background:var(--paper)}
+/* Treatments — tiered category layout (direction mockup "A") */
+.treat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap;margin-bottom:14px}
+.treat-head .eyebrow{margin-bottom:14px;color:var(--gold)}
+.treat-head h2{font-family:var(--display);font-weight:500;color:var(--navy-900);font-size:clamp(30px,4.2vw,48px);line-height:1.08;letter-spacing:-.01em}
+.treat-head .lede{color:var(--muted);font-size:17px;max-width:44ch}
+.cat{display:grid;grid-template-columns:240px 1fr;gap:36px;padding:34px 0;border-top:1px solid var(--line)}
+.cat:first-of-type{border-top:none}
+.cat-label .ci{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.1em}
+.cat-label h3{font-family:var(--display);font-weight:500;font-size:25px;color:var(--navy-900);margin:8px 0 10px;line-height:1.12}
+.cat-label p{font-size:14px;color:var(--muted);max-width:26ch}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--gold);transition:width .3s ease}
+.card:hover{transform:translateY(-3px);border-color:#d3deea;box-shadow:0 14px 30px rgba(7,32,59,.08)}
+.card:hover::before{width:100%}
+.mark{width:38px;height:38px;border-radius:10px;background:var(--ice);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mark img{width:24px;height:24px}
+.card h4{font-family:var(--body);font-weight:600;font-size:16px;color:var(--navy-900);letter-spacing:-.01em}
+.card p{font-size:13.5px;color:var(--muted);line-height:1.5;flex:1}
+.more{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--navy);display:inline-flex;align-items:center;gap:7px}
+.more b{color:var(--gold);font-weight:500;transition:transform .2s ease}
+.card:hover .more b{transform:translateX(4px)}
+.treat-cta{margin-top:30px;background:var(--navy-900);border-radius:18px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
+.treat-cta .tc-h{font-family:var(--display);color:#fff;font-size:22px;font-weight:500;line-height:1.2}
+.treat-cta .tc-p{color:#aebfcf;font-size:14.5px;margin-top:6px}
+@media(max-width:860px){.cat{grid-template-columns:1fr;gap:18px}.cards{grid-template-columns:1fr}}
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .tcard{background:#fff;border:1px solid var(--line-light);border-radius:20px;padding:0;
   position:relative;overflow:hidden;min-height:210px;display:flex;flex-direction:column;
@@ -280,7 +309,7 @@ a{color:inherit;text-decoration:none}
 .field input,.field select,.field textarea{font-family:var(--body);font-size:15px;color:var(--ink);background:var(--paper);
   border:1px solid var(--line-light);border-radius:12px;padding:13px 15px;width:100%;transition:border-color .25s,box-shadow .25s}
 .field textarea{resize:vertical;min-height:96px}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(43,166,224,.15)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(200,169,106,.15)}
 .field input:user-invalid,.field input:focus:invalid{border-color:#d4574e}
 .consent{display:flex;gap:11px;align-items:flex-start;font-size:13.5px;color:rgba(14,27,40,.74);line-height:1.5;margin-bottom:22px;cursor:pointer}
 .consent input{margin-top:2px;width:17px;height:17px;flex:0 0 17px;accent-color:var(--cyan)}
@@ -308,6 +337,7 @@ a{color:inherit;text-decoration:none}
 .foot-col a:hover{color:var(--cyan-bright)}
 .foot-reg{padding:26px 0;border-bottom:1px solid var(--line-dark);font-size:12.5px;color:rgba(220,232,242,.55);line-height:1.7;max-width:760px}
 .foot-bot{display:flex;justify-content:space-between;align-items:center;padding-top:24px;gap:14px;flex-wrap:wrap}
+.foot-mini{padding:16px 0 0;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--gold-soft)}
 .foot-legal{display:flex;gap:22px;flex-wrap:wrap;font-size:12.5px}
 .foot-legal a{color:rgba(220,232,242,.6)}.foot-legal a:hover{color:var(--cyan-bright)}
 .foot-copy{font-family:var(--mono);font-size:11.5px;color:rgba(220,232,242,.4);letter-spacing:.04em}
@@ -368,9 +398,9 @@ a{color:inherit;text-decoration:none}
       <a href="#treatments" class="btn btn-ghost">Explore treatments</a>
     </div>
     <div class="hero-trust" data-hero>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> GDC-registered clinicians</div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg> CQC-regulated practice</div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg> 3D digital treatment planning</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Private implant, cosmetic &amp; restorative dentistry</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M7 7h7a3 3 0 0 1 0 6H8a3 3 0 0 0 0 6h8"/></svg> Clear, itemised quotes — no hidden costs</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Consultation-led care in Kingsbury, London</div>
     </div>
   </div>
   <div class="scrollcue"><i></i> Scroll</div>
@@ -384,21 +414,47 @@ a{color:inherit;text-decoration:none}
 
 <!-- TREATMENTS grid -->
 <section class="section treat" id="treatments"><div class="wrap">
-  <div class="sec-head" data-reveal>
-    <span class="eyebrow">Treatments</span>
-    <h2>Everything your smile needs, in one clinic.</h2>
-    <p>From a single implant to a full-arch rebuild — each treatment digitally planned and finished in metal-free, globally certified materials.</p>
+  <div class="treat-head" data-reveal>
+    <div>
+      <span class="eyebrow">What we treat</span>
+      <h2>Care, organised<br>around you.</h2>
+    </div>
+    <p class="lede">From implants to cosmetic smile design, every treatment is delivered to the same standard. They're grouped here by what brought you in &mdash; so you can find your starting point faster.</p>
   </div>
-  <div class="tgrid">
-    <a class="tcard feat" href="/treatments/all-on-4-all-on-6" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><div class="tx-medallion"><img src="/img/icons/all-on-4-6.svg" alt="" width="56" height="56"></div></div><div class="tx-card-body"><h3>All-on-4 &amp; All-on-6</h3><p>A complete fixed set of teeth on four or six implants, with temporaries the same stage — the definitive answer to dentures and extensive tooth loss.</p><span class="go">Explore full-arch →</span></div></a>
-    <a class="tcard" href="/treatments/dental-implants" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><div class="tx-medallion"><img src="/img/icons/implant.svg" alt="" width="56" height="56"></div></div><div class="tx-card-body"><h3>Dental Implants</h3><p>Single or multiple missing teeth replaced with a permanent, natural-feeling root.</p><span class="go">Learn more →</span></div></a>
-    <a class="tcard" href="/treatments/emax-veneers" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><div class="tx-medallion"><img src="/img/icons/veneers.svg" alt="" width="56" height="56"></div></div><div class="tx-card-body"><h3>E.max Veneers</h3><p>Ultra-thin laminate veneers for a bright, natural and durable front line.</p><span class="go">Learn more →</span></div></a>
-    <a class="tcard" href="/treatments/zirconium-crowns" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><div class="tx-medallion"><img src="/img/icons/zirconium-crowns.svg" alt="" width="56" height="56"></div></div><div class="tx-card-body"><h3>Zirconium Crowns</h3><p>Metal-free crowns matching the strength and translucency of real teeth.</p><span class="go">Learn more →</span></div></a>
-    <a class="tcard" href="/treatments/composite-bonding" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><div class="tx-medallion"><img src="/img/icons/composite-bonding.svg" alt="" width="56" height="56"></div></div><div class="tx-card-body"><h3>Composite Bonding</h3><p>Reshape and brighten teeth in a single visit — no drilling, no anaesthetic.</p><span class="go">Learn more →</span></div></a>
-    <a class="tcard" href="/treatments/hollywood-smile" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><div class="tx-medallion"><img src="/img/icons/hollywood-smile.svg" alt="" width="56" height="56"></div></div><div class="tx-card-body"><h3>Hollywood Smile</h3><p>A complete cosmetic redesign of your visible smile line, built around your face.</p><span class="go">Learn more →</span></div></a>
-    <a class="tcard" href="/treatments/robotic-implant" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><div class="tx-medallion"><img src="/img/icons/robotic-implant.svg" alt="" width="56" height="56"></div></div><div class="tx-card-body"><h3>Robotic Implant</h3><p>Robot-guided placement for sub-millimetre accuracy and faster healing.</p><span class="go">Learn more →</span></div></a>
-    <a class="tcard" href="/treatments/oral-surgery" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><div class="tx-medallion"><img src="/img/icons/oral-surgery.svg" alt="" width="56" height="56"></div></div><div class="tx-card-body"><h3>Oral Surgery</h3><p>Complex extractions, bone grafts and corrective procedures, in safe hands.</p><span class="go">Learn more →</span></div></a>
-    <a class="tcard" href="/treatments/teeth-whitening" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><div class="tx-medallion"><img src="/img/icons/teeth-whitening.svg" alt="" width="56" height="56"></div></div><div class="tx-card-body"><h3>Teeth Whitening</h3><p>Enlighten and Boutique systems for a measured, even and lasting brightness.</p><span class="go">Learn more →</span></div></a>
+
+  <div class="cat" data-reveal>
+    <div class="cat-label"><div class="ci">01</div><h3>Replace missing teeth</h3><p>Permanent, fixed solutions &mdash; from a single tooth to a full arch.</p></div>
+    <div class="cards">
+      <a class="card" href="/treatments/dental-implants"><div class="mark"><img src="/img/icons/implant.svg" alt="" width="24" height="24"></div><h4>Dental Implants</h4><p>A permanent, natural-looking replacement for a single missing tooth &mdash; root and crown.</p><div class="more">Learn more <b>&rarr;</b></div></a>
+      <a class="card" href="/treatments/all-on-4-all-on-6"><div class="mark"><img src="/img/icons/all-on-4-6.svg" alt="" width="24" height="24"></div><h4>All-on-4 &amp; All-on-6</h4><p>A full arch of fixed teeth, secured by four or six implants &mdash; often in a single day.</p><div class="more">Learn more <b>&rarr;</b></div></a>
+      <a class="card" href="/treatments/robotic-implant"><div class="mark"><img src="/img/icons/robotic-implant.svg" alt="" width="24" height="24"></div><h4>Robotic Implant</h4><p>Computer-guided placement for sub-millimetre precision and a smoother recovery.</p><div class="more">Learn more <b>&rarr;</b></div></a>
+    </div>
+  </div>
+
+  <div class="cat" data-reveal>
+    <div class="cat-label"><div class="ci">02</div><h3>Cosmetic &amp; smile design</h3><p>Refine the shape, shade and balance of your smile.</p></div>
+    <div class="cards">
+      <a class="card" href="/treatments/emax-veneers"><div class="mark"><img src="/img/icons/veneers.svg" alt="" width="24" height="24"></div><h4>E.max Veneers</h4><p>Hand-finished porcelain for a refined, natural-looking smile.</p><div class="more">Learn more <b>&rarr;</b></div></a>
+      <a class="card" href="/treatments/composite-bonding"><div class="mark"><img src="/img/icons/composite-bonding.svg" alt="" width="24" height="24"></div><h4>Composite Bonding</h4><p>Reshape, close gaps and brighten &mdash; usually in a single visit.</p><div class="more">Learn more <b>&rarr;</b></div></a>
+      <a class="card" href="/treatments/hollywood-smile"><div class="mark"><img src="/img/icons/hollywood-smile.svg" alt="" width="24" height="24"></div><h4>Hollywood Smile</h4><p>A complete transformation, designed around your face and proportions.</p><div class="more">Learn more <b>&rarr;</b></div></a>
+      <a class="card" href="/treatments/teeth-whitening"><div class="mark"><img src="/img/icons/teeth-whitening.svg" alt="" width="24" height="24"></div><h4>Teeth Whitening</h4><p>Professional, dentist-supervised whitening for a safe, even result.</p><div class="more">Learn more <b>&rarr;</b></div></a>
+    </div>
+  </div>
+
+  <div class="cat" data-reveal>
+    <div class="cat-label"><div class="ci">03</div><h3>Restore &amp; repair</h3><p>Protect and rebuild teeth that need strengthening.</p></div>
+    <div class="cards">
+      <a class="card" href="/treatments/zirconium-crowns"><div class="mark"><img src="/img/icons/zirconium-crowns.svg" alt="" width="24" height="24"></div><h4>Zirconium Crowns</h4><p>Strong, metal-free crowns that blend with your natural teeth.</p><div class="more">Learn more <b>&rarr;</b></div></a>
+      <a class="card" href="/treatments/oral-surgery"><div class="mark"><img src="/img/icons/oral-surgery.svg" alt="" width="24" height="24"></div><h4>Oral Surgery</h4><p>Extractions and surgical care in safe, experienced hands.</p><div class="more">Learn more <b>&rarr;</b></div></a>
+    </div>
+  </div>
+
+  <div class="treat-cta" data-reveal>
+    <div>
+      <div class="tc-h">Not sure which treatment is right for you?</div>
+      <div class="tc-p">Start with a consultation &mdash; we'll assess, explain your options, and give you a clear, itemised quote.</div>
+    </div>
+    <a class="btn btn-gold" href="#contact">Book a consultation &rarr;</a>
   </div>
 </div></section>
 
@@ -576,12 +632,13 @@ a{color:inherit;text-decoration:none}
   <div class="foot-reg">
     Vestadent Clinic is operated by Vestadent Limited (registered in England &amp; Wales, company no. 12993512). All dentists are registered with the General Dental Council (GDC). The practice is regulated by the Care Quality Commission (CQC) and registered with the Information Commissioner's Office (ICO, reference ZC111000). A full complaints procedure is available on request. Patient information on this site is for general guidance and does not constitute a diagnosis or treatment plan.
   </div>
+  <div class="foot-mini">Regulated by the GDC and CQC.</div>
   <div class="foot-bot">
     <div class="foot-legal">
       <a href="/privacy-policy">Privacy</a><a href="/cookie-policy">Cookies</a><a href="/terms">Terms</a>
       <a href="/complaints">Complaints</a><a href="/accessibility">Accessibility</a><a href="/sitemap.xml">Sitemap</a>
     </div>
-    <div class="foot-copy">© 2026 Vestadent Limited · 230 Church Lane, London NW9 8SN · GDC · CQC · ICO</div>
+    <div class="foot-copy">© 2026 Vestadent Limited · 230 Church Lane, London NW9 8SN</div>
   </div>
 </div></footer>
 
