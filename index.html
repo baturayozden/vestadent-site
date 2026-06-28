@@ -90,7 +90,7 @@ html,body{overflow-x:clip}
 body{font-family:var(--body);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:500}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.26em;text-transform:uppercase;font-weight:500}
 
 /* grain + cursor */
 .grain{position:fixed;inset:-50%;z-index:9998;pointer-events:none;opacity:.04;
@@ -167,7 +167,7 @@ a{color:inherit;text-decoration:none}
 .section{padding:118px 0;position:relative}
 .sec-head{max-width:720px;margin-bottom:58px}
 .sec-head .eyebrow{color:var(--cyan)}
-.sec-head h2{font-family:var(--display);font-weight:500;font-size:clamp(32px,4.6vw,56px);line-height:1.03;letter-spacing:-.015em;margin:18px 0 0}
+.sec-head h2{font-family:var(--display);font-weight:500;font-size:clamp(34px,4.8vw,60px);line-height:1.03;letter-spacing:-.015em;margin:18px 0 0}
 .sec-head p{margin-top:20px;font-size:17px;color:rgba(14,27,40,.64);max-width:580px}
 
 /* TREATMENTS grid */
@@ -175,20 +175,20 @@ a{color:inherit;text-decoration:none}
 /* Treatments — tiered category layout (direction mockup "A") */
 .treat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap;margin-bottom:14px}
 .treat-head .eyebrow{margin-bottom:14px;color:var(--gold)}
-.treat-head h2{font-family:var(--display);font-weight:500;color:var(--navy-900);font-size:clamp(30px,4.2vw,48px);line-height:1.08;letter-spacing:-.01em}
+.treat-head h2{font-family:var(--display);font-weight:500;color:var(--navy-900);font-size:clamp(33px,4.5vw,52px);line-height:1.08;letter-spacing:-.01em}
 .treat-head .lede{color:var(--muted);font-size:17px;max-width:44ch}
 .cat{display:grid;grid-template-columns:240px 1fr;gap:36px;padding:34px 0;border-top:1px solid var(--line)}
 .cat:first-of-type{border-top:none}
 .cat-label .ci{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.1em}
-.cat-label h3{font-family:var(--display);font-weight:500;font-size:25px;color:var(--navy-900);margin:8px 0 10px;line-height:1.12}
+.cat-label h3{font-family:var(--display);font-weight:500;font-size:27px;color:var(--navy-900);margin:8px 0 10px;line-height:1.12}
 .cat-label p{font-size:14px;color:var(--muted);max-width:26ch}
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;position:relative;overflow:hidden}
 .card::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--gold);transition:width .3s ease}
 .card:hover{transform:translateY(-3px);border-color:#d3deea;box-shadow:0 14px 30px rgba(7,32,59,.08)}
 .card:hover::before{width:100%}
-.mark{width:38px;height:38px;border-radius:10px;background:var(--ice);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.mark img{width:24px;height:24px}
+.card .mark{width:38px;height:38px;border-radius:10px;background:var(--ice);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.card .mark img{width:24px;height:24px}
 .card h4{font-family:var(--body);font-weight:600;font-size:16px;color:var(--navy-900);letter-spacing:-.01em}
 .card p{font-size:13.5px;color:var(--muted);line-height:1.5;flex:1}
 .more{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--navy);display:inline-flex;align-items:center;gap:7px}
@@ -239,7 +239,7 @@ a{color:inherit;text-decoration:none}
 .impl-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
 .impl-hint{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(14,27,40,.4);pointer-events:none}
 .impl-txt .eyebrow{color:var(--cyan)}
-.impl-txt h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4vw,50px);line-height:1.04;letter-spacing:-.01em;margin:18px 0 18px}
+.impl-txt h2{font-family:var(--display);font-weight:500;font-size:clamp(32px,4.3vw,54px);line-height:1.04;letter-spacing:-.01em;margin:18px 0 18px}
 .impl-txt p{font-size:16px;color:rgba(14,27,40,.66);margin-bottom:26px;max-width:440px}
 .spec{list-style:none;display:flex;flex-direction:column;gap:0;margin-bottom:30px;border-top:1px solid var(--line-light)}
 .spec li{display:flex;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid var(--line-light);font-size:14.5px}
@@ -282,7 +282,7 @@ a{color:inherit;text-decoration:none}
 .contact{background:var(--bone-bright)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
 .contact .eyebrow{color:var(--cyan)}
-.contact h2{font-family:var(--display);font-weight:500;font-size:clamp(32px,4.4vw,54px);line-height:1.02;margin:18px 0 26px;letter-spacing:-.015em}
+.contact h2{font-family:var(--display);font-weight:500;font-size:clamp(34px,4.6vw,58px);line-height:1.02;margin:18px 0 26px;letter-spacing:-.015em}
 .info-row{display:flex;gap:15px;padding:20px 0;border-top:1px solid var(--line-light);align-items:flex-start}
 .info-row:last-of-type{border-bottom:1px solid var(--line-light)}
 .info-row .ic{flex:0 0 20px;color:var(--navy-700);margin-top:2px}
@@ -400,7 +400,6 @@ a{color:inherit;text-decoration:none}
     <div class="hero-trust" data-hero>
       <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Private implant, cosmetic &amp; restorative dentistry</div>
       <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M7 7h7a3 3 0 0 1 0 6H8a3 3 0 0 0 0 6h8"/></svg> Clear, itemised quotes — no hidden costs</div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Consultation-led care in Kingsbury, London</div>
     </div>
   </div>
   <div class="scrollcue"><i></i> Scroll</div>
@@ -577,7 +576,7 @@ a{color:inherit;text-decoration:none}
         <a href="https://maps.app.goo.gl/Gg4Vhe1HU1Uxnw1R6" target="_blank" class="btn btn-dark">Get directions</a>
       </div>
     </div>
-    <div class="map" data-reveal><iframe title="Map showing the clinic location" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.731858582179!2d-0.2644293233759667!3d51.57314897182833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876111e0031ddd1%3A0x6e7f0704df6a6f86!2sDentafly%20Dental%20Clinic%20-%20London!5e0!3m2!1sen!2suk!4v1782599565811!5m2!1sen!2suk"></iframe></div>
+    <div class="map" data-reveal><iframe title="Map showing the Vestadent clinic location" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen style="width:100%;height:100%;min-height:520px;border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.731858582179!2d-0.2644293233759412!3d51.57314897182833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876111e0031ddd1%3A0x6e7f0704df6a6f86!2sDentafly%20Dental%20Clinic%20-%20London!5e0!3m2!1sen!2suk!4v1782677228192!5m2!1sen!2suk"></iframe></div>
   </div>
 
   <div class="booking" id="book" data-reveal>
@@ -632,7 +631,6 @@ a{color:inherit;text-decoration:none}
   <div class="foot-reg">
     Vestadent Clinic is operated by Vestadent Limited (registered in England &amp; Wales, company no. 12993512). All dentists are registered with the General Dental Council (GDC). The practice is regulated by the Care Quality Commission (CQC) and registered with the Information Commissioner's Office (ICO, reference ZC111000). A full complaints procedure is available on request. Patient information on this site is for general guidance and does not constitute a diagnosis or treatment plan.
   </div>
-  <div class="foot-mini">Regulated by the GDC and CQC.</div>
   <div class="foot-bot">
     <div class="foot-legal">
       <a href="/privacy-policy">Privacy</a><a href="/cookie-policy">Cookies</a><a href="/terms">Terms</a>

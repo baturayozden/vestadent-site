@@ -15,7 +15,7 @@ html{scroll-behavior:smooth}
 body{font-family:var(--body);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.26em;text-transform:uppercase;font-weight:500}
 
 .grain{position:fixed;inset:-50%;z-index:9998;pointer-events:none;opacity:.04;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");mix-blend-mode:overlay}
@@ -91,7 +91,7 @@ a{color:inherit;text-decoration:none}
 .sec{padding:84px 0;position:relative}
 .sec.alt{background:var(--bone-bright)}
 .sec.dark{background:linear-gradient(180deg,var(--navy-800),var(--navy-900));color:var(--bone);overflow:hidden}
-.sec h2{font-family:var(--display);font-weight:500;font-size:clamp(28px,4vw,44px);line-height:1.05;letter-spacing:-.015em;margin-bottom:24px}
+.sec h2{font-family:var(--display);font-weight:500;font-size:clamp(30px,4.3vw,48px);line-height:1.05;letter-spacing:-.015em;margin-bottom:24px}
 .sec.dark h2{color:#fff}
 .lead-col{max-width:760px}
 .lead-col p{font-size:17px;color:rgba(14,27,40,.74);margin-bottom:18px}
@@ -200,7 +200,7 @@ a{color:inherit;text-decoration:none}
 .pbody{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start;padding:60px 0}
 .pbody .content > section{margin-bottom:40px}
 .pbody .content > section:last-child{margin-bottom:0}
-.pbody .content h2{font-family:var(--display);font-weight:500;font-size:27px;color:var(--navy-900);margin:0 0 14px}
+.pbody .content h2{font-family:var(--display);font-weight:500;font-size:30px;color:var(--navy-900);margin:0 0 14px}
 .pbody .content .kicker{color:var(--gold);margin-bottom:12px;display:block}
 .pbody .content p.body{color:#33485b;font-size:16px;margin-bottom:12px;line-height:1.6}
 .who{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px}
