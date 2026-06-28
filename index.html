@@ -170,7 +170,7 @@ a{color:inherit;text-decoration:none}
 /* TREATMENTS grid */
 .treat{background:var(--bone-bright)}
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.tcard{background:#fff;border:1px solid var(--line-light);border-radius:20px;padding:30px 28px;
+.tcard{background:#fff;border:1px solid var(--line-light);border-radius:20px;padding:0;
   position:relative;overflow:hidden;min-height:210px;display:flex;flex-direction:column;
   transition:transform .45s var(--e-expo),box-shadow .45s,border-color .45s}
 .tcard::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--cyan);transition:width .45s var(--e-expo)}
@@ -180,6 +180,18 @@ a{color:inherit;text-decoration:none}
 .tcard h3{font-family:var(--display);font-size:23px;font-weight:500;margin:18px 0 8px;letter-spacing:-.01em}
 .tcard p{font-size:14px;color:rgba(14,27,40,.6);line-height:1.55}
 .tcard .go{margin-top:16px;font-size:13px;font-weight:500;color:var(--navy-700);display:inline-flex;gap:7px;align-items:center}
+/* Claude Design — champagne medallions (icon-based, no photos) */
+.tx-card-visual{height:150px;display:flex;align-items:center;justify-content:center;position:relative;
+  background:radial-gradient(120% 110% at 50% 35%,#fbf4e6 0%,#eef4f9 72%);border-bottom:1px solid #e6edf3}
+.tx-ring{position:absolute;width:120px;height:120px;border-radius:50%;border:1px solid rgba(200,169,106,.30)}
+.tx-card-body{padding:16px 28px 28px;display:flex;flex-direction:column;flex:1}
+.tx-hero-medallion{width:188px;height:188px;border-radius:50%;flex-shrink:0;position:relative;
+  display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 42% 38%,#fff,#e7eef4 72%);box-shadow:inset 0 2px 14px rgba(7,32,59,.08)}
+.tx-hero-medallion.tx-lg{width:min(320px,70%);height:auto;aspect-ratio:1}
+.tx-hero-ring{position:absolute;inset:14px;border-radius:50%;border:1px solid rgba(200,169,106,.35)}
+.tx-hero-medallion img{width:55%;height:auto}
+.tx-card-visual img{width:96px;height:96px}
 .tcard.feat{background:linear-gradient(155deg,var(--navy-700),var(--navy-900));border-color:transparent;color:var(--bone)}
 .tcard.feat .ic{color:var(--cyan-bright)}
 .tcard.feat h3{color:#fff;font-size:25px}.tcard.feat p{color:rgba(220,232,242,.8)}
@@ -189,7 +201,8 @@ a{color:inherit;text-decoration:none}
 .implant{background:var(--white)}
 .impl-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
 .impl-vis{position:relative;height:min(560px,70vh);border-radius:26px;overflow:hidden;
-  background:radial-gradient(120% 100% at 50% 30%,#fff,#E6EFF7);border:1px solid var(--line-light)}
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(120deg,#eef4f9,#fbf4e6);border:1px solid #e6edf3}
 #implant3d{position:absolute;inset:0}
 .impl-vis canvas{display:block}
 .impl-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
@@ -375,15 +388,15 @@ a{color:inherit;text-decoration:none}
     <p>From a single implant to a full-arch rebuild — each treatment digitally planned and finished in metal-free, globally certified materials.</p>
   </div>
   <div class="tgrid">
-    <a class="tcard feat" href="/treatments/all-on-4-all-on-6" data-reveal><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 9c0-3 3-5 8-5s8 2 8 5c0 6-3 11-4 11s-1-4-4-4-3 4-4 4-4-5-4-11z"/></svg><h3>All-on-4 &amp; All-on-6</h3><p>A complete fixed set of teeth on four or six implants, with temporaries the same stage — the definitive answer to dentures and extensive tooth loss.</p><span class="go">Explore full-arch →</span></a>
-    <a class="tcard" href="/treatments/dental-implants" data-reveal><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M8 7h8M9 11h6"/></svg><h3>Dental Implants</h3><p>Single or multiple missing teeth replaced with a permanent, natural-feeling root.</p><span class="go">Learn more →</span></a>
-    <a class="tcard" href="/treatments/emax-veneers" data-reveal><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1 9a3 3 0 01-3 2H9a3 3 0 01-3-2z"/></svg><h3>E.max Veneers</h3><p>Ultra-thin laminate veneers for a bright, natural and durable front line.</p><span class="go">Learn more →</span></a>
-    <a class="tcard" href="/treatments/zirconium-crowns" data-reveal><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z"/></svg><h3>Zirconium Crowns</h3><p>Metal-free crowns matching the strength and translucency of real teeth.</p><span class="go">Learn more →</span></a>
-    <a class="tcard" href="/treatments/composite-bonding" data-reveal><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4c4 0 6 3 6 7s-2 9-6 9-6-5-6-9 2-7 6-7z"/></svg><h3>Composite Bonding</h3><p>Reshape and brighten teeth in a single visit — no drilling, no anaesthetic.</p><span class="go">Learn more →</span></a>
-    <a class="tcard" href="/treatments/hollywood-smile" data-reveal><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 9c0-3 3-4 7-4s7 1 7 4-3 10-4 10-1-3-3-3-2 3-3 3-4-7-4-10z"/><path d="M9 8l1 1M14 8l-1 1"/></svg><h3>Hollywood Smile</h3><p>A complete cosmetic redesign of your visible smile line, built around your face.</p><span class="go">Learn more →</span></a>
-    <a class="tcard" href="/treatments/robotic-implant" data-reveal><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="3" width="12" height="7" rx="2"/><path d="M12 10v6M9 20h6"/></svg><h3>Robotic Implant</h3><p>Robot-guided placement for sub-millimetre accuracy and faster healing.</p><span class="go">Learn more →</span></a>
-    <a class="tcard" href="/treatments/oral-surgery" data-reveal><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4c3 0 5 2 5 5 0 4-2 11-5 11S7 13 7 9c0-3 2-5 5-5z"/></svg><h3>Oral Surgery</h3><p>Complex extractions, bone grafts and corrective procedures, in safe hands.</p><span class="go">Learn more →</span></a>
-    <a class="tcard" href="/treatments/teeth-whitening" data-reveal><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3M5 8l2 2M19 8l-2 2M6 14c0-3 3-5 6-5s6 2 6 5-3 7-6 7-6-4-6-7z"/></svg><h3>Teeth Whitening</h3><p>Enlighten and Boutique systems for a measured, even and lasting brightness.</p><span class="go">Learn more →</span></a>
+    <a class="tcard feat" href="/treatments/all-on-4-all-on-6" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><img src="/img/icons/all-on-4-6.svg" alt="" width="96" height="96"></div><div class="tx-card-body"><h3>All-on-4 &amp; All-on-6</h3><p>A complete fixed set of teeth on four or six implants, with temporaries the same stage — the definitive answer to dentures and extensive tooth loss.</p><span class="go">Explore full-arch →</span></div></a>
+    <a class="tcard" href="/treatments/dental-implants" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><img src="/img/icons/implant.svg" alt="" width="96" height="96"></div><div class="tx-card-body"><h3>Dental Implants</h3><p>Single or multiple missing teeth replaced with a permanent, natural-feeling root.</p><span class="go">Learn more →</span></div></a>
+    <a class="tcard" href="/treatments/emax-veneers" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><img src="/img/icons/veneers.svg" alt="" width="96" height="96"></div><div class="tx-card-body"><h3>E.max Veneers</h3><p>Ultra-thin laminate veneers for a bright, natural and durable front line.</p><span class="go">Learn more →</span></div></a>
+    <a class="tcard" href="/treatments/zirconium-crowns" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><img src="/img/icons/zirconium-crowns.svg" alt="" width="96" height="96"></div><div class="tx-card-body"><h3>Zirconium Crowns</h3><p>Metal-free crowns matching the strength and translucency of real teeth.</p><span class="go">Learn more →</span></div></a>
+    <a class="tcard" href="/treatments/composite-bonding" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><img src="/img/icons/composite-bonding.svg" alt="" width="96" height="96"></div><div class="tx-card-body"><h3>Composite Bonding</h3><p>Reshape and brighten teeth in a single visit — no drilling, no anaesthetic.</p><span class="go">Learn more →</span></div></a>
+    <a class="tcard" href="/treatments/hollywood-smile" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><img src="/img/icons/hollywood-smile.svg" alt="" width="96" height="96"></div><div class="tx-card-body"><h3>Hollywood Smile</h3><p>A complete cosmetic redesign of your visible smile line, built around your face.</p><span class="go">Learn more →</span></div></a>
+    <a class="tcard" href="/treatments/robotic-implant" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><img src="/img/icons/robotic-implant.svg" alt="" width="96" height="96"></div><div class="tx-card-body"><h3>Robotic Implant</h3><p>Robot-guided placement for sub-millimetre accuracy and faster healing.</p><span class="go">Learn more →</span></div></a>
+    <a class="tcard" href="/treatments/oral-surgery" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><img src="/img/icons/oral-surgery.svg" alt="" width="96" height="96"></div><div class="tx-card-body"><h3>Oral Surgery</h3><p>Complex extractions, bone grafts and corrective procedures, in safe hands.</p><span class="go">Learn more →</span></div></a>
+    <a class="tcard" href="/treatments/teeth-whitening" data-reveal><div class="tx-card-visual"><span class="tx-ring"></span><img src="/img/icons/teeth-whitening.svg" alt="" width="96" height="96"></div><div class="tx-card-body"><h3>Teeth Whitening</h3><p>Enlighten and Boutique systems for a measured, even and lasting brightness.</p><span class="go">Learn more →</span></div></a>
   </div>
 </div></section>
 
@@ -391,8 +404,7 @@ a{color:inherit;text-decoration:none}
 <section class="section implant" id="implant"><div class="wrap">
   <div class="impl-grid">
     <div class="impl-vis" data-reveal>
-      <div id="implant3d"><div class="impl-fallback"><svg width="150" viewBox="0 0 80 200" fill="none" stroke="#1B5580" stroke-width="2"><path d="M40 20v150M28 40h24M26 56h28M28 72h24M30 88h20"/><path d="M40 170c-6 0-10-6-10-12h20c0 6-4 12-10 12z"/></svg></div></div>
-      <div class="impl-hint">Drag to rotate</div>
+      <div class="tx-hero-medallion tx-lg"><span class="tx-hero-ring"></span><img src="/img/icons/implant.svg" alt="" width="168" height="168"></div>
     </div>
     <div class="impl-txt" data-reveal>
       <span class="eyebrow">The Implant</span>
@@ -574,7 +586,6 @@ a{color:inherit;text-decoration:none}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.14/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
