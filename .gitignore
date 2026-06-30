@@ -1,3 +1,6 @@
 DEPLOY-vestadent.md
 .DS_Store
 .vercel
+
+# Source clinic photos — only optimized versions in img/practice/ are committed
+clinic-photos/

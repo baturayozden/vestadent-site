@@ -286,6 +286,10 @@ a{color:inherit;text-decoration:none}
 .hours{font-size:14px;color:rgba(14,27,40,.7);line-height:1.95}
 .map{border-radius:22px;overflow:hidden;border:1px solid var(--line-light);min-height:520px}
 .map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.04)}
+.map-col{display:flex;flex-direction:column;gap:14px}
+.find-us figure,.find-us{margin:0}
+.find-us img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid var(--line-light)}
+.find-us figcaption{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted,#5A6B7B);margin-top:8px}
 .contact-cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
 
 /* BOOKING FORM */
@@ -530,18 +534,18 @@ a{color:inherit;text-decoration:none}
   <div style="margin-top:34px"><a href="#contact" class="btn btn-dark">Start with a consultation <span class="arr">→</span></a></div>
 </div></section>
 
-<!-- INSIDE THE PRACTICE — TODO: replace placeholders with real photographs of THIS clinic (exterior, reception, treatment room, equipment). No stock or AI-generated imagery. -->
+<!-- INSIDE THE PRACTICE — real photographs of the Kingsbury clinic. -->
 <section class="section gallery" id="practice"><div class="wrap">
   <div class="sec-head" data-reveal>
     <span class="eyebrow">Inside the practice</span>
-    <h2>A calm, modern clinic in Kingsbury.</h2>
-    <p>Purpose-built for digital dentistry, from the first scan to the finished smile. Real photographs of the practice are added here before launch.</p>
+    <h2>Inside our Kingsbury practice.</h2>
+    <p>Vestadent Clinic, 230 Church Lane, London.</p>
   </div>
   <div class="gal-grid">
-    <figure class="gal-item" data-reveal><img src="/img/placeholder-landscape.svg" alt="Vestadent clinic exterior on Church Lane, Kingsbury — photograph to be supplied" width="800" height="600" loading="lazy"><figcaption class="gal-cap">Clinic exterior</figcaption></figure>
-    <figure class="gal-item" data-reveal><img src="/img/placeholder-landscape.svg" alt="Vestadent reception and waiting area — photograph to be supplied" width="800" height="600" loading="lazy"><figcaption class="gal-cap">Reception</figcaption></figure>
-    <figure class="gal-item" data-reveal><img src="/img/placeholder-landscape.svg" alt="Vestadent treatment room — photograph to be supplied" width="800" height="600" loading="lazy"><figcaption class="gal-cap">Treatment room</figcaption></figure>
-    <figure class="gal-item" data-reveal><img src="/img/placeholder-landscape.svg" alt="Vestadent 3D imaging and digital scanning equipment — photograph to be supplied" width="800" height="600" loading="lazy"><figcaption class="gal-cap">Imaging &amp; scanning</figcaption></figure>
+    <figure class="gal-item" data-reveal><picture><source srcset="/img/practice/exterior.webp" type="image/webp"><img src="/img/practice/exterior.jpg" alt="Vestadent practice exterior at 230 Church Lane, Kingsbury, London" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption class="gal-cap">Exterior</figcaption></figure>
+    <figure class="gal-item" data-reveal><picture><source srcset="/img/practice/waiting-room.webp" type="image/webp"><img src="/img/practice/waiting-room.jpg" alt="Vestadent waiting area in Kingsbury, London" width="1200" height="1600" loading="lazy" decoding="async"></picture><figcaption class="gal-cap">Waiting room</figcaption></figure>
+    <figure class="gal-item" data-reveal><picture><source srcset="/img/practice/treatment-room.webp" type="image/webp"><img src="/img/practice/treatment-room.jpg" alt="Vestadent treatment room in Kingsbury, London" width="1200" height="1600" loading="lazy" decoding="async"></picture><figcaption class="gal-cap">Treatment room</figcaption></figure>
+    <figure class="gal-item" data-reveal><picture><source srcset="/img/practice/ct-scanner.webp" type="image/webp"><img src="/img/practice/ct-scanner.jpg" alt="CBCT 3D scanner (Dentsply Sirona) at Vestadent, Kingsbury" width="1200" height="1600" loading="lazy" decoding="async"></picture><figcaption class="gal-cap">CT scanner</figcaption></figure>
   </div>
 </div></section>
 
@@ -582,13 +586,17 @@ a{color:inherit;text-decoration:none}
       <div class="info-row"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><div class="lbl">Clinic</div><div class="val">Vestadent Clinic, 230 Church Lane,<br>London, NW9 8SN</div></div></div>
       <div class="info-row"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.2a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg><div><div class="lbl">Call</div><div class="val"><a href="tel:02033029290">0203 302 9290</a></div></div></div>
       <div class="info-row"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><div class="lbl">Email</div><div class="val"><a href="mailto:info@vestadent.co.uk">info@vestadent.co.uk</a></div></div></div>
+      <div class="info-row"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.83.5 3.62 1.45 5.19L2 22l5.05-1.32a9.87 9.87 0 0 0 4.99 1.35h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.02h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3 .79.8-2.92-.2-.31a8.2 8.2 0 0 1-1.26-4.34c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg><div><div class="lbl">WhatsApp</div><div class="val"><a href="https://wa.me/447727394028?text=Hi%2C%20I'd%20like%20to%20ask%20about%20treatments%20at%20Vestadent." target="_blank" rel="noopener">WhatsApp us</a></div></div></div>
       <div class="info-row"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><div class="lbl">Opening hours</div><div class="hours">Monday – Saturday&nbsp;&nbsp;09:00 – 18:00<br>Sunday&nbsp;&nbsp;Closed</div></div></div>
       <div class="contact-cta">
         <a href="tel:02033029290" class="btn btn-cyan">Call the clinic <span class="arr">→</span></a>
         <a href="https://maps.app.goo.gl/Gg4Vhe1HU1Uxnw1R6" target="_blank" class="btn btn-dark">Get directions</a>
       </div>
     </div>
+    <div class="map-col">
+    <figure class="find-us" data-reveal><picture><source srcset="/img/practice/exterior.webp" type="image/webp"><img src="/img/practice/exterior.jpg" alt="Find us — Vestadent practice exterior at 230 Church Lane, London" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Find us — 230 Church Lane, London NW9 8SN.</figcaption></figure>
     <div class="map" data-reveal><iframe title="Map showing the Vestadent clinic location" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen style="width:100%;height:100%;min-height:520px;border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2479.731858582179!2d-0.2644293233759412!3d51.57314897182833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876111e0031ddd1%3A0x6e7f0704df6a6f86!2sDentafly%20Dental%20Clinic%20-%20London!5e0!3m2!1sen!2suk!4v1782677228192!5m2!1sen!2suk"></iframe></div>
+    </div>
   </div>
 
   <div class="booking" id="book" data-reveal>
@@ -778,5 +786,18 @@ a{color:inherit;text-decoration:none}
   });
 })();
 </script>
+<!-- Floating WhatsApp button — entry point; conversation handled by Vestadent's WhatsApp AI -->
+<style>
+.wa-fab{position:fixed;right:22px;bottom:22px;z-index:50;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.22);transition:transform .18s ease,box-shadow .18s ease,opacity .25s ease,visibility .25s ease}
+.wa-fab:hover{transform:scale(1.07);box-shadow:0 10px 26px rgba(0,0,0,.30)}
+.wa-fab svg{width:30px;height:30px;display:block}
+.wa-fab.wa-hide{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(10px)}
+@media(max-width:600px){.wa-fab{right:16px;bottom:16px;width:52px;height:52px}.wa-fab svg{width:27px;height:27px}}
+@media(prefers-reduced-motion:reduce){.wa-fab{transition:opacity .25s ease,visibility .25s ease}.wa-fab:hover{transform:none}.wa-fab.wa-hide{transform:none}}
+</style>
+<a class="wa-fab" href="https://wa.me/447727394028?text=Hi%2C%20I'd%20like%20to%20ask%20about%20treatments%20at%20Vestadent." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#fff" d="M16.04 4C9.93 4 4.98 8.95 4.98 15.06c0 2.05.56 4.05 1.62 5.81L4.9 27.1l6.37-1.67a11.02 11.02 0 0 0 4.77 1.08h.01c6.11 0 11.06-4.95 11.06-11.06C27.11 8.95 22.15 4 16.04 4zm0 20.2h-.01a9.2 9.2 0 0 1-4.68-1.28l-.34-.2-3.78.99 1.01-3.68-.22-.38a9.13 9.13 0 0 1-1.4-4.86c0-5.07 4.13-9.2 9.21-9.2 2.46 0 4.77.96 6.51 2.7a9.14 9.14 0 0 1 2.69 6.51c0 5.08-4.13 9.21-9.2 9.21zm5.05-6.89c-.28-.14-1.64-.81-1.89-.9-.25-.09-.43-.14-.62.14-.18.28-.71.9-.87 1.08-.16.18-.32.21-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.38-1.64-1.54-1.92-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.49.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.05-.22-.54-.45-.46-.62-.47-.16-.01-.35-.01-.53-.01-.18 0-.49.07-.74.35-.25.28-.97.95-.97 2.31 0 1.36.99 2.68 1.13 2.86.14.18 1.95 2.98 4.73 4.18.66.29 1.18.46 1.58.59.66.21 1.27.18 1.74.11.53-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/></svg>
+</a>
+<script>(function(){var f=document.querySelector('.wa-fab'),c=document.getElementById('contact');if(!f||!c||!('IntersectionObserver'in window))return;new IntersectionObserver(function(e){f.classList.toggle('wa-hide',e[0].isIntersecting);},{threshold:.12}).observe(c);})();</script>
 </body>
 </html>
