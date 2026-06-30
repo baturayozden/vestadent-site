@@ -31,8 +31,9 @@ module.exports = async (req, res) => {
 
   const KEY = process.env.RESEND_API_KEY;
   const TO = process.env.TO || 'info@vestadent.co.uk';
-  // NOTE: FROM must be a domain verified in Resend before real delivery works.
-  const FROM = process.env.FROM || 'Vestadent Website <onboarding@resend.dev>';
+  // FROM must be on a domain verified in Resend. vestadent.co.uk is verified, so we
+  // default to it (never the unverified onboarding@resend.dev sandbox sender).
+  const FROM = process.env.FROM || 'Vestadent <noreply@vestadent.co.uk>';
   const FALLBACK = 'Please call us on 0203 302 9290 or email info@vestadent.co.uk.';
 
   if (!KEY) {
@@ -68,7 +69,8 @@ module.exports = async (req, res) => {
       console.error('Resend error', r.status, detail);
       return res.status(502).json({ ok: false, error: 'send_failed', message: FALLBACK });
     }
-    return res.status(200).json({ ok: true });
+    const sent = await r.json().catch(() => ({}));
+    return res.status(200).json({ ok: true, id: sent.id || null });
   } catch (err) {
     console.error('contact handler error', err);
     return res.status(502).json({ ok: false, error: 'send_failed', message: FALLBACK });
