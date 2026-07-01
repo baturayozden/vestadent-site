@@ -192,5 +192,80 @@
 <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#fff" d="M16.04 4C9.93 4 4.98 8.95 4.98 15.06c0 2.05.56 4.05 1.62 5.81L4.9 27.1l6.37-1.67a11.02 11.02 0 0 0 4.77 1.08h.01c6.11 0 11.06-4.95 11.06-11.06C27.11 8.95 22.15 4 16.04 4zm0 20.2h-.01a9.2 9.2 0 0 1-4.68-1.28l-.34-.2-3.78.99 1.01-3.68-.22-.38a9.13 9.13 0 0 1-1.4-4.86c0-5.07 4.13-9.2 9.21-9.2 2.46 0 4.77.96 6.51 2.7a9.14 9.14 0 0 1 2.69 6.51c0 5.08-4.13 9.21-9.2 9.21zm5.05-6.89c-.28-.14-1.64-.81-1.89-.9-.25-.09-.43-.14-.62.14-.18.28-.71.9-.87 1.08-.16.18-.32.21-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.38-1.64-1.54-1.92-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.49.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.05-.22-.54-.45-.46-.62-.47-.16-.01-.35-.01-.53-.01-.18 0-.49.07-.74.35-.25.28-.97.95-.97 2.31 0 1.36.99 2.68 1.13 2.86.14.18 1.95 2.98 4.73 4.18.66.29 1.18.46 1.58.59.66.21 1.27.18 1.74.11.53-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/></svg>
 </a>
 <script>(function(){var f=document.querySelector('.wa-fab'),c=document.getElementById('contact');if(!f||!c||!('IntersectionObserver'in window))return;new IntersectionObserver(function(e){f.classList.toggle('wa-hide',e[0].isIntersecting);},{threshold:.12}).observe(c);})();</script>
+<!-- Mobile menu (≤768px): header = logo + hamburger only; nav links / phone / Book move into the drawer -->
+<style>
+@media(max-width:768px){
+  .nav .nav-links,.nav .nav-right,.nav .burger{display:none!important}
+  .mnav-toggle{display:flex!important}
+}
+.mnav-toggle{display:none;position:fixed;top:14px;right:14px;width:46px;height:46px;align-items:center;justify-content:center;background:transparent;border:0;cursor:pointer;z-index:999;color:#EAF1F8}
+.mnav-toggle svg{width:26px;height:26px;display:block}
+.mnav{position:fixed;inset:0;z-index:1001;visibility:hidden;pointer-events:none}
+.mnav-scrim{position:absolute;inset:0;background:rgba(4,14,26,.55);opacity:0;transition:opacity .3s ease}
+.mnav-panel{position:absolute;top:0;right:0;height:100%;width:min(84vw,340px);background:linear-gradient(180deg,#0B2C4D,#07203B);border-left:1px solid rgba(220,232,242,.12);box-shadow:-20px 0 50px rgba(0,0,0,.35);transform:translateX(100%);transition:transform .34s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;padding:20px 24px calc(26px + env(safe-area-inset-bottom))}
+.mnav.open{visibility:visible;pointer-events:auto}
+.mnav.open .mnav-scrim{opacity:1}
+.mnav.open .mnav-panel{transform:none}
+.mnav-close{align-self:flex-end;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;color:#EAF1F8;font-size:26px;line-height:1;cursor:pointer;margin:-2px -6px 4px 0}
+.mnav-links{display:flex;flex-direction:column;gap:0;margin-top:4px}
+.mnav-links a{font-family:'Newsreader',Georgia,serif;font-size:21px;color:#EAF1F8;text-decoration:none;padding:14px 2px;border-bottom:1px solid rgba(220,232,242,.09)}
+.mnav-actions{margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:12px}
+.mnav-call{font-family:'IBM Plex Mono',monospace;font-size:15px;color:#C8A96A;text-decoration:none;white-space:nowrap;text-align:center;padding:13px;border:1px solid rgba(200,169,106,.42);border-radius:12px}
+.mnav-book{display:block;text-align:center;background:#C8A96A;color:#07203B;font-weight:600;font-size:15px;text-decoration:none;padding:15px;border-radius:12px}
+body.mnav-lock{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.mnav-panel,.mnav-scrim{transition:none}}
+</style>
+<button class="mnav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+</button>
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+  <div class="mnav-scrim" data-mnav-close></div>
+  <div class="mnav-panel">
+    <button class="mnav-close" aria-label="Close menu" data-mnav-close>&times;</button>
+    <nav class="mnav-links">
+      <a href="/#treatments">Treatments</a>
+      <a href="/treatments/dental-implants">Implants</a>
+      <a href="/#finance">Finance</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <div class="mnav-actions">
+      <a class="mnav-call" href="tel:02033029290">Call 0203 302 9290</a>
+      <a class="mnav-book" href="/#contact">Book consultation</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var t=document.querySelector('.mnav-toggle'), m=document.getElementById('mnav');
+  if(!t||!m)return;
+  function open(){m.classList.add('open');m.setAttribute('aria-hidden','false');t.setAttribute('aria-expanded','true');document.body.classList.add('mnav-lock');}
+  function close(){m.classList.remove('open');m.setAttribute('aria-hidden','true');t.setAttribute('aria-expanded','false');document.body.classList.remove('mnav-lock');}
+  t.addEventListener('click',function(){m.classList.contains('open')?close():open();});
+  m.querySelectorAll('[data-mnav-close]').forEach(function(el){el.addEventListener('click',close);});
+  m.querySelectorAll('.mnav-links a,.mnav-book').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close();});
+})();
+</script>
+<!-- Back to top -->
+<style>
+.to-top{position:fixed;right:22px;bottom:96px;width:46px;height:46px;border-radius:50%;background:#07203B;color:#C8A96A;border:1px solid rgba(200,169,106,.5);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:49;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s ease,visibility .3s ease,transform .3s ease,background .2s ease;box-shadow:0 6px 18px rgba(0,0,0,.22)}
+.to-top:hover{background:#0B2C4D}
+.to-top svg{width:20px;height:20px;display:block}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+@media(max-width:600px){.to-top{right:16px;bottom:84px;width:44px;height:44px}}
+@media(prefers-reduced-motion:reduce){.to-top{transition:opacity .2s ease,visibility .2s ease}}
+</style>
+<button class="to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+<script>
+(function(){
+  var b=document.querySelector('.to-top'); if(!b)return;
+  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function upd(){ window.scrollY>400 ? b.classList.add('show') : b.classList.remove('show'); }
+  window.addEventListener('scroll',upd,{passive:true}); upd();
+  b.addEventListener('click',function(){ window.scrollTo({top:0,behavior:rm?'auto':'smooth'}); });
+})();
+</script>
 </body>
 </html>
